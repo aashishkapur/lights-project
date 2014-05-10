@@ -26,13 +26,14 @@ jQuery(function($) {
 	{
 		var arr = new Array();
 		var data;
+		var adat;
 		var xmlhttp=new XMLHttpRequest();
 		xmlhttp.onreadystatechange=function() 
 		{
 			if (xmlhttp.readyState==4 && xmlhttp.status==200)
 			{
-				 var a = xmlhttp.responseText;
-				 console.log("RAW: " + a);
+				 var adata = xmlhttp.responseText;
+				 console.log("RAW: " + adat);
 				data=JSON.parse(xmlhttp.responseText);
 				console.log("data: " + data);
 				//console.log("345678909876543456 " + data[0][0]);
@@ -47,7 +48,7 @@ jQuery(function($) {
 		}
 		xmlhttp.open("GET","/maps/locations.php" ,true);
 		xmlhttp.send();
-		return data;
+		return adat;
 	}
 
 function initialize() {
