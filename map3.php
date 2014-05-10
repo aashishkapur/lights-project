@@ -67,6 +67,9 @@ function initialize() {
     var temp = getData();
     alert(temp);
 
+    for(int i = 0; i < temp.length; i++)
+    	markers.push(temp[i]);
+
     // Info Window Content
     var infoWindowContent = [
         ['info 1'],
