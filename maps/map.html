@@ -20,10 +20,10 @@
 				var a = xmlhttp.responseText;
 				console.log(a);
 				var data=JSON.parse(a);
-				console.log(data);
+				console.log("data!@#^&*%$#@#$%^&*(*&^%$#@!#$%^&*(" + data);
 				console.log(data[0]);
 				for (var x = 0; x < data[0].length; x++ ) {
-					var myLatlng = new google.maps.LatLng(parseFloat(data[0][x]),parseFloat(data[0][x]);
+					var myLatlng = new google.maps.LatLng(parseFloat(data[0][x]),parseFloat(data[0][x]));
 					arr[x] = myLatlng;
 					console.log(arr[x]);
 
