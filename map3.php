@@ -31,8 +31,8 @@ jQuery(function($) {
 		{
 			if (xmlhttp.readyState==4 && xmlhttp.status==200)
 			{
-				// var a = xmlhttp.responseText;
-				// console.log("RAW: " + a);
+				 var a = xmlhttp.responseText;
+				 console.log("RAW: " + a);
 				data=JSON.parse(xmlhttp.responseText);
 				console.log("data: " + data);
 				//console.log("345678909876543456 " + data[0][0]);
