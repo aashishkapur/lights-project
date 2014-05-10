@@ -4,7 +4,7 @@
 // $db_name="cfi-hack-v1";
 // $username="root";
 // $password="a";
-echo 'hello';
+echo 'hello<br/>';
 // $db_con = mysql_connect($db_host,$username,$password);
 // $connection_string = mysql_select_db($db_name);
 // // Connection
@@ -17,11 +17,11 @@ $db_conn = mysql_connect(':/cloudsql/lights-project:abcdef',
   );
 $selected = mysql_select_db('cfi-hack-v1');
 
-if($db_conn == false)
+if(!$db_conn)
 {
-	echo "ygefsjhdbvmcn,jeirtuhobckvxjnlhrtubdkvjcnlaorhutbdfvkjlasodhjknvl";
+	die("fywbdhjkjngihdjknvclm;sdfghirujknfgjhouinj" . mysql_error());
 }
-else
-	echo "aaaaaaaaaaaaaaa";
+
+echo "aaaaaaaaaaaaaaa";
 
 ?>	
