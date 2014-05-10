@@ -63,8 +63,10 @@ function initialize() {
     //map.setTilt(45);
         
     // Multiple Markers
-    var markers = getData();
-                        
+    var markers = new Array(2);
+    var temp = getData();
+    alert(temp);
+             
     // Info Window Content
     var infoWindowContent = [
         ['info 1'],
