@@ -1,0 +1,16 @@
+<script>
+showHint();
+	function showHint()  {
+	var xmlhttp=new XMLHttpRequest();
+	xmlhttp.onreadystatechange=function() {
+		if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+				alert(xmlhttp.responseText);
+			  var data =JSON.parse(xmlhttp.responseText);
+		
+		}
+	}
+	var string = "locations.php";
+	xmlhttp.open("GET",string, true);
+	xmlhttp.send();
+}
+	</script>
