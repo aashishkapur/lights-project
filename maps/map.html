@@ -69,23 +69,43 @@
 					title: 'Marker: ' + x + '!'
 				});
 				markers[x] = marker;
+				infowindow = new google.maps.InfoWindow
+				({
+					content: contentString[x]
+				});
+				google.maps.event.addListener(marker, 'click', function ()
+				{
+				// where I have added .html to the marker object.
+					infowindow.setContent(contentString[x]);
+					infowindow.open(map, this);
+				});
 			}
 		}
 
-			google.maps.event.addListener(markers[0], 'click', function()
-			{
-//			alert("1");
-	 		infowindow.setContent(contentString[0]);
+		// for (var i = 0; i < markers.length; i++)
+		// {
+		// 	var marker = markers[i];
+		// 	google.maps.event.addListener(marker, 'click', function ()
+		// 	{
+		// 	// where I have added .html to the marker object.
+			// 		infowindow.setContent(contentString[i]);
+			// 		infowindow.open(map, this);
+			// 	});
+			// }
+		// 	google.maps.event.addListener(markers[0], 'click', function()
+		// 	{
+		// 	alert("1");
+	 // 		//infowindow.setContent(contentString[0]);
 
-			infowindow.open(map,marker[0]);
-			});
+		// 	//infowindow.open(map,marker[0]);
+		// 	});
 
-		google.maps.event.addListener(markers[1], 'click', function()
-		{
-//			alert("2");
-			infowindow.setContent(contentString[1]);
-			infowindow.open(map,marker[1]);
-		});
+		// google.maps.event.addListener(markers[1], 'click', function()
+		// {
+		// 	alert("2");
+		// 	//infowindow.setContent(contentString[1]);
+		// 	//infowindow.open(map,marker[1]);
+		// });
 
 	}
 
