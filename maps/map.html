@@ -83,17 +83,17 @@
 				//   {
 				// 	infowindow.setContent(marker.title + "   " + num++);
 				// 	infowindow.open(map, marker);
- 			// 	 });
+			// 	 });
 
 				   (function(marker, x) {
-                        // add click event
-                        google.maps.event.addListener(marker, 'click', function() {
-                            infowindow = new google.maps.InfoWindow({
-                                content: contentString[x]
-                            });
-                            infowindow.open(map, marker);
-                        });
-                    })(marker, x);
+						// add click event
+						google.maps.event.addListener(marker, 'click', function() {
+							infowindow = new google.maps.InfoWindow({
+								content: contentString[x]
+							});
+							infowindow.open(map, marker);
+						});
+					})(marker, x);
 
 			}
 		}
