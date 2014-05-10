@@ -62,7 +62,7 @@
 	
 		// contentString[0] = '<p>FIRST INFO WINDOW</p>';
 		// contentString[1] = '<p>7tfdgsuyhbckxj</p>';
-
+		infowindow = new google.maps.InfoWindow({});
 		alert("loop  " +arr.length);
 		for (var x = 0; x < arr.length; x++)
 		{
@@ -78,29 +78,13 @@
 				console.log(markers.push(marker) + "             "
 					 + "added " + x + "   m:" + marker + "         " + markers);
 			
-				 //  google.maps.event.addListener(marker, 'click', function()
-				 //  {
-					// infowindow.setContent('test content');
-					// infowindow.open(map, marker);
- 				//  });
+				  google.maps.event.addListener(marker, 'click', function()
+				  {
+					infowindow.setContent('test content');
+					infowindow.open(map, marker);
+ 				 });
 			}
 		}
-
-		  google.maps.event.addListener(marker[0], 'click', function()
-				  {
-				  //	console.log("1");
-					infowindow.setContent(contentString[0]);
-					infowindow.open(map, marker);
- 				 });
-
-
-		 google.maps.event.addListener(marker[1], 'click', function()
-				  {
-				  //	console.log("2");
-					infowindow.setContent(contentString[1]);
-					infowindow.open(map, marker);
- 				 });
-
 	}
 
 
