@@ -38,8 +38,8 @@
     zoom: 4,
     center: arr[0]
   }
-
-  console.log(arr[0]);
+  if(arr[0] != null)
+	  console.log(arr[0]);
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
   for (var x = 0; x < arr.length; x++) {
 	if (arr[x] != null) {
