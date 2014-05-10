@@ -52,7 +52,7 @@
 
 	function initialize(arr)
 	{
-		alert("init");
+		//alert("init");
 		var mapOptions = 
 		{
 			zoom: 4,
@@ -64,7 +64,7 @@
 		// contentString[0] = '<p>FIRST INFO WINDOW</p>';
 		// contentString[1] = '<p>7tfdgsuyhbckxj</p>';
 		infowindow = new google.maps.InfoWindow({});
-		alert("loop  " +arr.length);
+		//alert("loop  " +arr.length);
 		for (var x = 0; x < arr.length; x++)
 		{
 			alert("X: " + x);
@@ -79,10 +79,10 @@
 				console.log(markers.push(marker) + "             "
 					 + "added " + x + "   m:" + marker + "         " + markers);
 			
-				  google.maps.event.addListener(marker, 'click', function()
+				  google.maps.event.addListener(markers[x], 'click', function()
 				  {
-					infowindow.setContent(marker.title + "   " + num++);
-					infowindow.open(map, marker);
+					infowindow.setContent(markers[x].title + "   " + num++);
+					infowindow.open(map, markers[x]);
  				 });
 			}
 		}
