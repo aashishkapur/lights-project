@@ -25,7 +25,7 @@ $selected = mysql_select_db('cfi-hack-v1');
 
 if(!$db_conn)
 {
-	die("fywbdhjkjngihdjknvclm;sdfghirujknfgjhouinj" . mysql_error());
+	die("fywbdhjkjngihdjknvclm;sdfghirujknfgjhouinj<br/>" . mysql_error());
 }
 
 echo "aaaaaaaaaaaaaaa";
