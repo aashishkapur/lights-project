@@ -29,7 +29,7 @@
 				console.log("345678909876543456" + data[0][0]);
 				for (var x = 0; x < data.length; x++) 
 				{
-					var myLatlng = new google.maps.LatLng(parseFloat(data[0][x]),parseFloat(data[0][x]));
+					var myLatlng = new google.maps.LatLng(data[0][x],data[0][x]);
 					arr[x] = myLatlng;
 					console.log(arr[x]);
 				}
