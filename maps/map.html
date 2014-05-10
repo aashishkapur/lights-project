@@ -46,11 +46,12 @@
 
 
 	var markers = new Array();
+	var asdf = false;
 	//var marker;
 
 	function initialize(arr)
 	{
-		//alert("init");
+		alert("init");
 		var mapOptions = 
 		{
 			zoom: 4,
@@ -62,10 +63,10 @@
 		// contentString[0] = '<p>FIRST INFO WINDOW</p>';
 		// contentString[1] = '<p>7tfdgsuyhbckxj</p>';
 		infowindow = new google.maps.InfoWindow({});
-		//alert("loop  " +arr.length);
+		alert("loop  " +arr.length);
 		for (var x = 0; x < arr.length; x++)
 		{
-			//alert("X: " + x);
+			alert("X: " + x);
 			if (arr[x] != null)
 			{
 				var marker = new google.maps.Marker(
@@ -74,8 +75,8 @@
 					map: map,
 					title: 'Marker: ' + x + '!'
 				});
-				//console.log(markers.push(marker) + "             "
-					// + "added " + x + "   m:" + marker + "         " + markers);
+				console.log(markers.push(marker) + "             "
+					 + "added " + x + "   m:" + marker + "         " + markers);
 			
 				 //  google.maps.event.addListener(marker, 'click', function()
 				 //  {
