@@ -39,10 +39,10 @@
 		xmlhttp.open("GET","locations.php" ,true);
 		xmlhttp.send();
 	}
-	var contentString = new Array(20);
-	contentString[0] = '<p>FIRST INFO WINDOW</p>';
+	var contentString = new Array();
+	contentString.push('<p>FIRST INFO WINDOW</p>');
 	var infowindow = null;
-	contentString[1] = '<p>7tfdgsuyhbckxj</p>';
+	contentString.push('<p>7tfdgsuyhbckxj</p>');
 
 
 	var markers = new Array();
@@ -64,9 +64,10 @@
 
 		for (var x = 0; x < arr.length; x++)
 		{
+			alert("X: " + x);
 			if (arr[x] != null)
 			{
-				marker = new google.maps.Marker(
+				var marker = new google.maps.Marker(
 				{
 					position: arr[x],
 					map: map,
