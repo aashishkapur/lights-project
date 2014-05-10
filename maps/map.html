@@ -12,7 +12,7 @@
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEPTzQE5w10jXl2qe7yEKuzpaXm8TeTHM&sensor=false"></script>
 <script type="text/javascript">
 	boolean gone = false;
-	getData();
+	//getData();
 	var arr = new Array(40);
 	function getData()  {
 		gone = true;
@@ -64,7 +64,7 @@ function initalize()
 	alert("problem");
 }
 
-google.maps.event.addDomListener(window, 'load', initialize(arr));
+google.maps.event.addDomListener(window, 'load', getData);
 	</script>
 </head>
   <body>
