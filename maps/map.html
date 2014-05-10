@@ -22,11 +22,11 @@
 		{
 			if (xmlhttp.readyState==4 && xmlhttp.status==200)
 			{
-				// var a = xmlhttp.responseText;
-				// console.log("RAW: " + a);
-				var data=JSON.parse(xmlhttp.responseText);
-				console.log("data2367876543234567 " + data);
-				console.log("345678909876543456 " + data[0][0]);
+				var a = xmlhttp.responseText;
+				console.log("RAW: " + a);
+				var data=JSON.parse(a);
+				console.log("data2367876543234567" + data);
+				console.log("345678909876543456" + data[0][0]);
 				for (var x = 0; x < data.length; x++) 
 				{
 					var myLatlng = new google.maps.LatLng(parseFloat(data[0][x]),parseFloat(data[0][x]));
@@ -39,17 +39,30 @@
 		xmlhttp.open("GET","locations.php" ,true);
 		xmlhttp.send();
 	}
-	var contentString = new Array(20);
-	contentString[0] = '<p>FIRST INFO WINDOW</p>';
-	var infowindow = null;
-	// new google.maps.InfoWindow({
-	// 	  content: contentString
-	//   });
+	var contentString = '<div id="content">'+
+	  '<div id="siteNotice">'+
+	  '</div>'+
+	  '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+	  '<div id="bodyContent">'+
+	  '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+	  'sandstone rock formation in the southern part of the '+
+	  'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+	  'south west of the nearest large town, Alice Springs; 450&#160;km '+
+	  '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+	  'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+	  'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+	  'Aboriginal people of the area. It has many springs, waterholes, '+
+	  'rock caves and ancient paintings. Uluru is listed as a World '+
+	  'Heritage Site.</p>'+
+	  '<p>Attribution: Uluru, <a href="http://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+	  'http://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+	  '(last visited June 22, 2009).</p>'+
+	  '</div>'+
+	  '</div>';
+	  	  var infowindow = new google.maps.InfoWindow({
+		  content: contentString
+	  });
 
-	contentString[1] = '<p>7tfdgsuyhbckxj</p>';
-
-
-	var markers = new Array(20);
 
 	function initialize(arr)
 	{
@@ -58,9 +71,7 @@
 			zoom: 4,
 			center: arr[0]
 		}
-
 		var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
 		for (var x = 0; x < arr.length; x++)
 		{
 			if (arr[x] != null)
@@ -71,61 +82,18 @@
 					map: map,
 					title: 'Marker: ' + x + '!'
 				});
-				markers[x] = marker;
-				// infowindow = new google.maps.InfoWindow
-				// ({
-				// 	content: contentString[x]
-				// });
-				// google.maps.event.addListener(marker, 'click', function ()
-				// {
-				// // where I have added .html to the marker object.
-				// 	infowindow.setContent(contentString[x]);
-				// 	infowindow.open(map, this);
-				// });
+				google.maps.event.addListener(marker, 'click', function()
+				{
+   					 infowindow.open(map,marker);
+ 			 	});
+			}
+
 			}
 		}
 
-		// for (var i = 0; i < markers.length; i++)
-		// {
-		// 	var marker = markers[i];
-		// 	google.maps.event.addListener(marker, 'click', function ()
-		// 	{
-		// 	// where I have added .html to the marker object.
-		// 		infowindow.setContent(contentString[i]);
-		// 		infowindow.open(map, this);
-		// 	});
-		// }
-		google.maps.event.addListener(markers[0], 'click', function()
-		{
-		alert("1");
- 		//infowindow.setContent(contentString[0]);
-
-		//infowindow.open(map,marker[0]);
-	});
-
-	google.maps.event.addListener(markers[1], 'click', function()
-	{
-		alert("2");
-		//infowindow.setContent(contentString[1]);
-		//infowindow.open(map,marker[1]);
-	});
-
 	}
 
-	google.maps.event.addListener(markers[0], 'click', function()
-	{
-		alert("1");
- 		//infowindow.setContent(contentString[0]);
 
-		//infowindow.open(map,marker[0]);
-	});
-
-	google.maps.event.addListener(markers[1], 'click', function()
-	{
-		alert("2");
-		//infowindow.setContent(contentString[1]);
-		//infowindow.open(map,marker[1]);
-	});
 
 
 
