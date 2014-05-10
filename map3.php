@@ -76,7 +76,7 @@ function initialize() {
     
     // Loop through our array of markers & place each one on the map  
     for( i = 0; i < markers.length; i++ ) {
-        var position = new google.maps.LatLng(markers[i][0], markers[i][1]);
+        var position = new google.maps.LatLng(parseFloat(markers[i][0]), parseFloat(markers[i][1]));
        // bounds.extend(position);
         marker = new google.maps.Marker({
             position: position,
