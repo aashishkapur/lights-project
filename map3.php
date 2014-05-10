@@ -22,17 +22,17 @@ jQuery(function($) {
     document.body.appendChild(script);
 });
 
+	var adat;
 	function getData()
 	{
 		var arr = new Array();
 		var data;
-		var adat;
 		var xmlhttp=new XMLHttpRequest();
 		xmlhttp.onreadystatechange=function() 
 		{
 			if (xmlhttp.readyState==4 && xmlhttp.status==200)
 			{
-				 var adat = xmlhttp.responseText;
+				 adat = xmlhttp.responseText;
 				 console.log("RAW: " + adat);
 				data=JSON.parse(xmlhttp.responseText);
 				console.log("data: " + data);
@@ -48,7 +48,7 @@ jQuery(function($) {
 		}
 		xmlhttp.open("GET","/maps/locations.php" ,true);
 		xmlhttp.send();
-		return adat;
+		//return adat;
 	}
 
 function initialize() {
@@ -65,11 +65,11 @@ function initialize() {
     // Multiple Markers
     var markers = new Array();
     var temp = new Array();
-    temp = getData();
-    alert(temp);
+    getData();
+    alert(adat);
 
-    for(var i = 0; i < temp.length; i++)
-    	markers.push(temp[i]);
+    for(var i = 0; i < adat.length; i++)
+    	markers.push(adats[i]);
 
     // Info Window Content
     var infoWindowContent = [
