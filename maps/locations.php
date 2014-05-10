@@ -14,7 +14,7 @@
 		$row = mysql_fetch_array($result);
 		$arr[$x-1] =  array($row[7], $row[8]);
 	}
-	$json = json_encode($arr);
-	echo $json;
+	//$json = json_encode($arr);
+	echo json_encode($arr);
 
 ?>
