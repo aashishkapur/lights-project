@@ -21,5 +21,7 @@ if($db_conn == false)
 {
 	echo "ygefsjhdbvmcn,jeirtuhobckvxjnlhrtubdkvjcnlaorhutbdfvkjlasodhjknvl";
 }
+else
+	echo "aaaaaaaaaaaaaaa";
 
 ?>
