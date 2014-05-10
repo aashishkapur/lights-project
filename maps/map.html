@@ -63,10 +63,10 @@
 		// contentString[0] = '<p>FIRST INFO WINDOW</p>';
 		// contentString[1] = '<p>7tfdgsuyhbckxj</p>';
 		infowindow = new google.maps.InfoWindow({});
-		alert("loop  " +arr.length);
+		//alert("loop  " +arr.length);
 		for (var x = 0; x < arr.length; x++)
 		{
-			alert("X: " + x);
+			//alert("X: " + x);
 			if (arr[x] != null)
 			{
 				var marker = new google.maps.Marker(
@@ -88,15 +88,17 @@
 
 		  google.maps.event.addListener(marker[0], 'click', function()
 				  {
+				  	alert("0");
 					infowindow.setContent(contentString[0]);
-					infowindow.open(map, marker);
+					infowindow.open(map, marker[0]);
  				 });
 
 
 		 google.maps.event.addListener(marker[1], 'click', function()
 				  {
+				  	alert("1");
 					infowindow.setContent(contentString[1]);
-					infowindow.open(map, marker);
+					infowindow.open(map, marker[1]);
  				 });
 
 	}
