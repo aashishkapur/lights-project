@@ -73,25 +73,25 @@
 				({
 					content: contentString[x]
 				});
-				google.maps.event.addListener(marker, 'click', function ()
-				{
-				// where I have added .html to the marker object.
-					infowindow.setContent(contentString[x]);
-					infowindow.open(map, this);
-				});
+				// google.maps.event.addListener(marker, 'click', function ()
+				// {
+				// // where I have added .html to the marker object.
+				// 	infowindow.setContent(contentString[x]);
+				// 	infowindow.open(map, this);
+				// });
 			}
 		}
 
-		// for (var i = 0; i < markers.length; i++)
-		// {
-		// 	var marker = markers[i];
-		// 	google.maps.event.addListener(marker, 'click', function ()
-		// 	{
-		// 	// where I have added .html to the marker object.
-			// 		infowindow.setContent(contentString[i]);
-			// 		infowindow.open(map, this);
-			// 	});
-			// }
+		for (var i = 0; i < markers.length; i++)
+		{
+			var marker = markers[i];
+			google.maps.event.addListener(marker, 'click', function ()
+			{
+			// where I have added .html to the marker object.
+					infowindow.setContent(contentString[i]);
+					infowindow.open(map, this);
+			});
+		}
 		// 	google.maps.event.addListener(markers[0], 'click', function()
 		// 	{
 		// 	alert("1");
