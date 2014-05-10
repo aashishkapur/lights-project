@@ -9,7 +9,7 @@
 	
 	for ($x = 1; $x <= $length; $x++) {
 	
-		$query =  "SELECT * FROM zavala1 WHERE ID='$x'";
+		$query =  "SELECT * FROM name WHERE ID='$x'";
 		$result = mysql_query($query);
 		$row = mysql_fetch_array($result);
 		$arr[$x-1] =  array($row[7], $row[8]);
