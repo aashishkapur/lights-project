@@ -32,7 +32,7 @@
 		xmlhttp.open("GET","locations.php" ,true);
 		xmlhttp.send();
 	}
-	function initialize() {
+	function initialize(var arr) {
 			var arr = new Array(40);
 
 		getData();
@@ -58,7 +58,7 @@
  
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
+google.maps.event.addDomListener(window, 'load', getData);
 	</script>
 </head>
   <body>
