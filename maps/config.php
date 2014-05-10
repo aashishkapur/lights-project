@@ -15,7 +15,7 @@ $db_conn = mysql_connect(':/cloudsql/lights-project:abcdef',
   'root', // username
   'a'      // password
   );
-$selected = mysql_select_db('cfi-hack-v1'>);
+$selected = mysql_select_db('cfi-hack-v1>');
 
 if($db_conn == false)
 {
