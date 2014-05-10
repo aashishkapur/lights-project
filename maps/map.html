@@ -88,6 +88,7 @@
 
 		  google.maps.event.addListener(marker[0], 'click', function()
 				  {
+				  //	console.log("1");
 					infowindow.setContent(contentString[0]);
 					infowindow.open(map, marker);
  				 });
@@ -95,6 +96,7 @@
 
 		 google.maps.event.addListener(marker[1], 'click', function()
 				  {
+				  //	console.log("2");
 					infowindow.setContent(contentString[1]);
 					infowindow.open(map, marker);
  				 });
