@@ -78,13 +78,27 @@
 				console.log(markers.push(marker) + "             "
 					 + "added " + x + "   m:" + marker + "         " + markers);
 			
-				  google.maps.event.addListener(marker, 'click', function()
-				  {
-					infowindow.setContent('test content');
-					infowindow.open(map, marker);
- 				 });
+				 //  google.maps.event.addListener(marker, 'click', function()
+				 //  {
+					// infowindow.setContent('test content');
+					// infowindow.open(map, marker);
+ 				//  });
 			}
 		}
+
+		  google.maps.event.addListener(marker[0], 'click', function()
+				  {
+					infowindow.setContent(contentString[0]);
+					infowindow.open(map, marker);
+ 				 });
+
+
+		 google.maps.event.addListener(marker[1], 'click', function()
+				  {
+					infowindow.setContent(contentString[1]);
+					infowindow.open(map, marker);
+ 				 });
+
 	}
 
 
