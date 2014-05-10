@@ -34,8 +34,8 @@ jQuery(function($) {
 				// var a = xmlhttp.responseText;
 				// console.log("RAW: " + a);
 				data=JSON.parse(xmlhttp.responseText);
-				console.log("data2367876543234567 " + data);
-				console.log("345678909876543456 " + data[0][0]);
+				console.log("data: " + data);
+				//console.log("345678909876543456 " + data[0][0]);
 				// for (var x = 0; x < data[0].length; x++) 
 				// {
 				// 	var myLatlng = new google.maps.LatLng(parseFloat(data[0][x]),parseFloat(data[0][x]));
