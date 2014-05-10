@@ -46,6 +46,7 @@
 
 
 	var markers = new Array();
+	var asdf = false;
 	//var marker;
 
 	function initialize(arr)
@@ -80,7 +81,7 @@
 				  google.maps.event.addListener(marker, 'click', function()
 				  {
 					return function() {
-						infowindow.setContent(contentString[i]);
+						infowindow.setContent('test content');
 						infowindow.open(map, marker);
 					}
  				 });
