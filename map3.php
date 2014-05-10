@@ -64,7 +64,8 @@ function initialize() {
         
     // Multiple Markers
     var markers = new Array();
-    var temp = getData();
+    var temp = new Array();
+    temp = getData();
     alert(temp);
 
     for(var i = 0; i < temp.length; i++)
