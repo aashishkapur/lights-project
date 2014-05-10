@@ -63,7 +63,7 @@ function initialize() {
     //map.setTilt(45);
         
     // Multiple Markers
-    var markers = new Array(2);
+    var markers = new Array();
     var temp = getData();
     alert(temp);
 
