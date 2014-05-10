@@ -76,14 +76,25 @@
 					map: map,
 					title: 'Marker: ' + x + '!'
 				});
-				console.log(markers.push(marker) + "             "
-					 + "added " + x + "   m:" + marker + "         " + markers);
+				// console.log(markers.push(marker) + "             "
+				// 	 + "added " + x + "   m:" + marker + "         " + markers);
 			
-				  google.maps.event.addListener(marker, 'click', function()
-				  {
-					infowindow.setContent(marker.title + "   " + num++);
-					infowindow.open(map, marker);
- 				 });
+				//   google.maps.event.addListener(marker, 'click', function()
+				//   {
+				// 	infowindow.setContent(marker.title + "   " + num++);
+				// 	infowindow.open(map, marker);
+ 			// 	 });
+
+				   (function(marker, i) {
+                        // add click event
+                        google.maps.event.addListener(marker, 'click', function() {
+                            infowindow = new google.maps.InfoWindow({
+                                content: contentString[i]
+                            });
+                            infowindow.open(map, marker);
+                        });
+                    })(marker, i);
+
 			}
 		}
 	}
