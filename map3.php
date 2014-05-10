@@ -32,7 +32,7 @@ jQuery(function($) {
 		{
 			if (xmlhttp.readyState==4 && xmlhttp.status==200)
 			{
-				 var adata = xmlhttp.responseText;
+				 var adat = xmlhttp.responseText;
 				 console.log("RAW: " + adat);
 				data=JSON.parse(xmlhttp.responseText);
 				console.log("data: " + data);
@@ -66,7 +66,7 @@ function initialize() {
     var markers = new Array(2);
     var temp = getData();
     alert(temp);
-             
+
     // Info Window Content
     var infoWindowContent = [
         ['info 1'],
