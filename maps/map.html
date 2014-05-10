@@ -16,6 +16,7 @@
 		var xmlhttp=new XMLHttpRequest();
 		xmlhttp.onreadystatechange=function() {
 			if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+
 				var data=JSON.parse(xmlhttp.responseText);
 				console.log(data);
 				console.log(data[0]);
@@ -32,10 +33,12 @@
 		xmlhttp.send();
 	}
 	function initialize(arr) {
+		
   var mapOptions = {
     zoom: 4,
     center: arr[0]
   }
+
   console.log(arr[0]);
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
   for (var x = 0; x < arr.length; x++) {
