@@ -13,7 +13,7 @@ echo 'hello<br/>';
 
 $db_conn = mysql_connect(':/cloudsql/lights-project:abcdef',
   'root', // username
-  ''      // password
+  ''      // password THIS SHOULD BE LEFT BLANK
   );
 if(!$db_conn)
 {
@@ -21,7 +21,7 @@ if(!$db_conn)
 }
 
 // echo 'abcdef';
-// $selected = mysql_select_db('cfi-hack-v1');
+ $selected = mysql_select_db('cfi-hack-v1');
 
 // if(!$db_conn)
 // {
