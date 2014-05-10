@@ -12,12 +12,12 @@
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEPTzQE5w10jXl2qe7yEKuzpaXm8TeTHM&sensor=false"></script>
 <script type="text/javascript">
 
-	var gone = false;
+	//var gone = false;
 	//getData();
 	var arr = new Array(40);
 	function getData()
 	{
-		gone = true;
+		//gone = true;
 		var xmlhttp=new XMLHttpRequest();
 		xmlhttp.onreadystatechange=function() 
 		{
@@ -47,7 +47,7 @@
     		zoom: 4,
     		center: arr[0]
   		}
-  		console.log(gone + "   " + arr[0]);
+  		//console.log(gone + "   " + arr[0]);
   		var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
   		for (var x = 0; x < arr.length; x++)
   		{
@@ -61,7 +61,7 @@
 				});
 			}
 		}
-	  alert(gone);
+	 // alert(gone);
 
 	}
 
