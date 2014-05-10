@@ -27,5 +27,7 @@ handlers:
 - url: /maps/(.+)\.html
   static_dir: /maps/\1
 
+- url: /maps/
+  static_dir: /maps/map.htm
 # - url: /todo.txt
 #   static_files: todo.txt
