@@ -6,6 +6,7 @@
     echo 'Hi Dhruv';
 ?>
 
+<a href="/maps/">GOT MAPS WORKING!!!!!!!!!!</a>
 </body>
 
 </html>
