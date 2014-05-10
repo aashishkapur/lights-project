@@ -69,6 +69,7 @@
 	  	content: contentString2
 	  })
 
+	var markers = new Array(20);
 
 	function initialize(arr)
 	{
@@ -77,7 +78,6 @@
 			zoom: 4,
 			center: arr[0]
 		}
-		var markers = new Array(20);
 		var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 		for (var x = 0; x < arr.length; x++)
 		{
@@ -95,13 +95,13 @@
 		}
 	}
 
-	google.maps.event.addListener(marker[0], 'click', function()
+	google.maps.event.addListener(markers[0], 'click', function()
 	{
 		alert("1");
 		//infowindow.open(map,marker[0]);
 	});
 
-	google.maps.event.addListener(marker[1], 'click', function()
+	google.maps.event.addListener(markers[1], 'click', function()
 	{
 		alert("2");
 		//infowindow2.open(map,marker[1]);
