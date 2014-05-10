@@ -27,7 +27,7 @@
 				var data=JSON.parse(xmlhttp.responseText);
 				console.log("data2367876543234567 " + data);
 				console.log("345678909876543456 " + data[0][0]);
-				for (var x = 0; x < data.length; x++) 
+				for (var x = 0; x < data[0].length; x++) 
 				{
 					var myLatlng = new google.maps.LatLng(parseFloat(data[0][x]),parseFloat(data[0][x]));
 					arr[x] = myLatlng;
@@ -111,22 +111,6 @@
 	});
 
 	}
-
-	google.maps.event.addListener(markers[0], 'click', function()
-	{
-		alert("1");
- 		//infowindow.setContent(contentString[0]);
-
-		//infowindow.open(map,marker[0]);
-	});
-
-	google.maps.event.addListener(markers[1], 'click', function()
-	{
-		alert("2");
-		//infowindow.setContent(contentString[1]);
-		//infowindow.open(map,marker[1]);
-	});
-
 
 
 	google.maps.event.addDomListener(window, 'load', getData);
