@@ -42,7 +42,6 @@
 	var contentString = new Array(20);
 	contentString[0] = '<p>FIRST INFO WINDOW</p>';
 	var infowindow = null;
-
 	contentString[1] = '<p>7tfdgsuyhbckxj</p>';
 
 
@@ -54,9 +53,13 @@
 		{
 			zoom: 4,
 			center: arr[1]
-		}
+		};
 
 		var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+	
+		contentString[0] = '<p>FIRST INFO WINDOW</p>';
+		contentString[1] = '<p>7tfdgsuyhbckxj</p>';
+
 
 		for (var x = 0; x < arr.length; x++)
 		{
@@ -64,15 +67,19 @@
 			{
 				var marker = new google.maps.Marker(
 				{
-					position: arr[x], 
+					position: arr[x],
 					map: map,
 					title: 'Marker: ' + x + '!'
 				});
 				markers[x] = marker;
+				google.maps.event.addListener(marker, 'click', function()
+				{
+					infowindow.setContent(contentString[x]);
+					infowindow.close();	
+   					infowindow.open(map,marker);
+  				});
 			}
 		}
-
-
 	}
 
 
