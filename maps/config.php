@@ -1,10 +1,10 @@
 <?php
 // Connection's Parameters
-$db_host="173.194.242.144";
-$db_name="cfi-hack-v1";
-$username="root";
-$password="a";
-
+// $db_host="173.194.242.144";
+// $db_name="cfi-hack-v1";
+// $username="root";
+// $password="a";
+echo 'hello';
 // $db_con = mysql_connect($db_host,$username,$password);
 // $connection_string = mysql_select_db($db_name);
 // // Connection
