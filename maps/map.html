@@ -85,15 +85,15 @@
 				// 	infowindow.open(map, marker);
  			// 	 });
 
-				   (function(marker, i) {
+				   (function(marker, x) {
                         // add click event
                         google.maps.event.addListener(marker, 'click', function() {
                             infowindow = new google.maps.InfoWindow({
-                                content: contentString[i]
+                                content: contentString[x]
                             });
                             infowindow.open(map, marker);
                         });
-                    })(marker, i);
+                    })(marker, x);
 
 			}
 		}
