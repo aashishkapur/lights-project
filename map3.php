@@ -22,7 +22,7 @@ jQuery(function($) {
     document.body.appendChild(script);
 });
 
-	var adat;
+	var adat = [];
 	function getData()
 	{
 		var arr = new Array();
