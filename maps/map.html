@@ -80,7 +80,7 @@
 			
 				  google.maps.event.addListener(marker, 'click', function()
 				  {
-					infowindow.setContent('test content');
+					infowindow.setContent(marker.title);
 					infowindow.open(map, marker);
  				 });
 			}
