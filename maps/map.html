@@ -79,10 +79,10 @@
 				console.log(markers.push(marker) + "             "
 					 + "added " + x + "   m:" + marker + "         " + markers);
 			
-				  google.maps.event.addListener(markers[x], 'click', function()
+				  google.maps.event.addListener(marker, 'click', function()
 				  {
-					infowindow.setContent(markers[x].title + "   " + num++);
-					infowindow.open(map, markers[x]);
+					infowindow.setContent(marker.title + "   " + num++);
+					infowindow.open(map, marker);
  				 });
 			}
 		}

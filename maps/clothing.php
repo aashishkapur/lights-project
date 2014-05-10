@@ -11,9 +11,7 @@
 		json_encode($row[11]);
 	}
 	else {
-		$str = "BOSSASSBITCH";
-		echo($str);
-		json_encode($str);
+
 	}
 	
 	//&& isValid($_GET['ID'])
