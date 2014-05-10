@@ -22,9 +22,9 @@
 		{
 			if (xmlhttp.readyState==4 && xmlhttp.status==200)
 			{
-				var a = xmlhttp.responseText;
-				console.log("RAW: " + a);
-				var data=JSON.parse(a);
+				// var a = xmlhttp.responseText;
+				// console.log("RAW: " + a);
+				var data=JSON.parse(xmlhttp.responseText);
 				console.log("data2367876543234567" + data);
 				console.log("345678909876543456" + data[0][0]);
 				for (var x = 0; x < data.length; x++) 
