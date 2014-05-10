@@ -13,7 +13,6 @@
     height: 100%;
 }	</style>
 
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEPTzQE5w10jXl2qe7yEKuzpaXm8TeTHM&sensor=false"></script>
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript">
 jQuery(function($) {
