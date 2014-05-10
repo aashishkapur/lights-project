@@ -22,32 +22,52 @@ jQuery(function($) {
     document.body.appendChild(script);
 });
 
+	function getData()
+	{
+		var arr = new Array();
+		var data;
+		var xmlhttp=new XMLHttpRequest();
+		xmlhttp.onreadystatechange=function() 
+		{
+			if (xmlhttp.readyState==4 && xmlhttp.status==200)
+			{
+				// var a = xmlhttp.responseText;
+				// console.log("RAW: " + a);
+				data=JSON.parse(xmlhttp.responseText);
+				console.log("data2367876543234567 " + data);
+				console.log("345678909876543456 " + data[0][0]);
+				// for (var x = 0; x < data[0].length; x++) 
+				// {
+				// 	var myLatlng = new google.maps.LatLng(parseFloat(data[0][x]),parseFloat(data[0][x]));
+				// 	arr.push(myLatlng);
+				// 	console.log(arr[x]);
+				// }
+				// initialize(arr);
+			}
+		}
+		xmlhttp.open("GET","/maps/locations.php" ,true);
+		xmlhttp.send();
+		return data;
+	}
+
 function initialize() {
     var map;
     var bounds = new google.maps.LatLngBounds();
     var mapOptions = {
-        mapTypeId: 'roadmap'
+			zoom: 4,
     };
                     
     // Display a map on the page
     map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-    map.setTilt(45);
+    //map.setTilt(45);
         
     // Multiple Markers
-    var markers = [
-        ['London Eye, London', 51.503454,-0.119562],
-        ['Palace of Westminster, London', 51.499633,-0.124755]
-    ];
+    var markers = getData();
                         
     // Info Window Content
     var infoWindowContent = [
-        ['<div class="info_content">' +
-        '<h3>London Eye</h3>' +
-        '<p>The London Eye is a giant Ferris wheel situated on the banks of the River Thames. The entire structure is 135 metres (443 ft) tall and the wheel has a diameter of 120 metres (394 ft).</p>' +        '</div>'],
-        ['<div class="info_content">' +
-        '<h3>Palace of Westminster</h3>' +
-        '<p>The Palace of Westminster is the meeting place of the House of Commons and the House of Lords, the two houses of the Parliament of the United Kingdom. Commonly known as the Houses of Parliament after its tenants.</p>' +
-        '</div>']
+        ['info 1'],
+        ['info 2']
     ];
         
     // Display multiple markers on a map
@@ -55,12 +75,12 @@ function initialize() {
     
     // Loop through our array of markers & place each one on the map  
     for( i = 0; i < markers.length; i++ ) {
-        var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
-        bounds.extend(position);
+        var position = new google.maps.LatLng(markers[i][0], markers[i][1]);
+       // bounds.extend(position);
         marker = new google.maps.Marker({
             position: position,
             map: map,
-            title: markers[i][0]
+            title: 'Marker' + i + "."
         });
         
         // Allow each marker to have an info window    
@@ -72,14 +92,14 @@ function initialize() {
         })(marker, i));
 
         // Automatically center the map fitting all markers on the screen
-        map.fitBounds(bounds);
+        //map.fitBounds(bounds);
     }
 
     // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
-    var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
-        this.setZoom(14);
-        google.maps.event.removeListener(boundsListener);
-    });
+    // var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
+    //     this.setZoom(14);
+    //     google.maps.event.removeListener(boundsListener);
+    // });
     
 }
 	// //getData();
