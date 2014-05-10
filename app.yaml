@@ -16,5 +16,5 @@ handlers:
 - url: /(.+\.php)$
   script: \1
 
-- url: /todo.txt
-  static_files: todo.txt
+# - url: /todo.txt
+#   static_files: todo.txt
