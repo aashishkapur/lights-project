@@ -12,9 +12,12 @@ handlers:
 - url: .*
   script: main.php
 
+- url: /map.php
+  script: map.php
+
 # Serve php scripts.
-- url: /(.+\.php)$
-  script: \1
+# - url: /(.+\.php)$
+#   script: \1
 
 # - url: /todo.txt
 #   static_files: todo.txt
