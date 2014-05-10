@@ -88,7 +88,7 @@
 			google.maps.event.addListener(marker, 'click', function ()
 			{
 			// where I have added .html to the marker object.
-				infowindow.setContent(contentString[i]);
+				infowindow.setContent(contentString[i].html);
 				infowindow.open(map, this);
 			});
 		}
