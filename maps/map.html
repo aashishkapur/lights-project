@@ -11,6 +11,7 @@
 
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEPTzQE5w10jXl2qe7yEKuzpaXm8TeTHM&sensor=false"></script>
 <script type="text/javascript">
+
 	boolean gone = false;
 	//getData();
 	var arr = new Array(40);
@@ -23,11 +24,11 @@
 			if (xmlhttp.readyState==4 && xmlhttp.status==200)
 			{
 				var a = xmlhttp.responseText;
-				console.log(a);
+				console.log("RAW: " + a);
 				var data=JSON.parse(a);
-				console.log("data!@#^&*%$#@#$%^&*(*&^%$#@!#$%^&*(" + data);
-				console.log(data[0][0]);
-				for (var x = 0; x < data[0].length; x++ ) 
+				console.log("data2367876543234567" + data);
+				console.log("345678909876543456" + data[0][0]);
+				for (var x = 0; x < data[0].length; x++) 
 				{
 					var myLatlng = new google.maps.LatLng(parseFloat(data[0][x]),parseFloat(data[0][x]));
 					arr[x] = myLatlng;
