@@ -72,7 +72,7 @@ function initialize() {
     alert(adat);
 
     for(var i = 0; i < adat.length; i++)
-    	markers.push(adat[i]);
+    	markers.push(adats[i]);
 
     // Info Window Content
     var infoWindowContent = [
