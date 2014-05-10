@@ -13,7 +13,7 @@ echo 'hello<br/>';
 
 $db_conn = mysql_connect(':/cloudsql/lights-project:abcdef',
   'root', // username
-  'a'      // password
+  ''      // password
   );
 if(!$db_conn)
 {
