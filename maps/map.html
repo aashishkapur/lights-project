@@ -80,10 +80,8 @@
 			
 				  google.maps.event.addListener(marker, 'click', function()
 				  {
-					return function() {
-						infowindow.setContent('test content');
-						infowindow.open(map, marker);
-					}
+					infowindow.setContent('test content');
+					infowindow.open(map, marker);
  				 });
 			}
 		}
