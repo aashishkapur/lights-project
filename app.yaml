@@ -1,4 +1,4 @@
-application: Lights-project
+application: lights-project
 version: 1
 runtime: php
 api_version: 1
@@ -9,5 +9,9 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 
-- url: /.*
+- url: .*
   script: main.php
+
+# Serve php scripts.
+- url: /(.+\.php)$
+  script: \1
