@@ -10,8 +10,8 @@
 
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEPTzQE5w10jXl2qe7yEKuzpaXm8TeTHM&sensor=false"></script>
 <script type="text/javascript">
+
 	getData();
-	var arr = new Array(40);
 	function getData()  {
 		var xmlhttp=new XMLHttpRequest();
 		xmlhttp.onreadystatechange=function() {
@@ -32,14 +32,17 @@
 		xmlhttp.open("GET","locations.php" ,true);
 		xmlhttp.send();
 	}
-	function initialize(arr) {
+	function initialize() {
+			var arr = new Array(40);
 
+		getData();
   var mapOptions = {
     zoom: 4,
     center: arr[0]
   }
   if(arr[0] != null)
 	  console.log(arr[0]);
+
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
   for (var x = 0; x < arr.length; x++) {
 	if (arr[x] != null) {
