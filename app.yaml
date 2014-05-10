@@ -23,11 +23,14 @@ handlers:
   script: \1
 
 - url: /maps/(.+\.php)$
-  script: /maps/\1
-- url: /maps/(.+)\.html
-  static_dir: /maps/\1
+  script: maps/\1
+
+- url: /maps/(.+)\.html$
+  static_files: maps/\1
+  upload: maps/*\.html$
 
 - url: /maps/
-  static_dir: /maps/map.htm
+  static_files: maps/map.html
+  upload: maps/map.html
 # - url: /todo.txt
 #   static_files: todo.txt
