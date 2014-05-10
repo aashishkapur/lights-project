@@ -45,7 +45,7 @@
 	contentString[1] = '<p>7tfdgsuyhbckxj</p>';
 
 
-	var markers = new Array(20);
+	var markers = new Array();
 
 	function initialize(arr)
 	{
@@ -71,15 +71,21 @@
 					map: map,
 					title: 'Marker: ' + x + '!'
 				});
-				markers[x] = marker;
-				google.maps.event.addListener(marker, 'click', function()
-				{
-					infowindow.setContent(contentString[x]);
-					infowindow.close();	
-   					infowindow.open(map,marker);
-  				});
+				markers.push(marker);
+				// google.maps.event.addListener(marker, 'click', function()
+				// {
+				// 	infowindow.setContent(contentString[x]);
+				// 	infowindow.close();	
+   	// 				infowindow.open(map,marker);
+  		// 		});
 			}
 		}
+		google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        	return function() {
+        		infowindow.setContent(contentString[i][0]);
+        		infowindow.open(map, marker);
+        	}
+      	})(marker, i));
 	}
 
 
