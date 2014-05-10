@@ -17,8 +17,9 @@
 		var xmlhttp=new XMLHttpRequest();
 		xmlhttp.onreadystatechange=function() {
 			if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-				console.log(xmlhttp.responseText);
-				var data=JSON.parse(xmlhttp.responseText);
+				var a = xmlhttp.responseText;
+				console.log(a);
+				var data=JSON.parse(a);
 				console.log(data);
 				console.log(data[0]);
 				for (var x = 0; x < data[0].length; x++ ) {
