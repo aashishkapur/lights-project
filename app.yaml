@@ -86,14 +86,18 @@ handlers:
   static_files: CFI/main.htm
   upload: CFI/main.htm
 
-- url: /cfi/scripts/(.+\.php)$
-  scripts: CFI/Scripts/\1
+# - url: /cfi/scripts/(.+\.php)$
+#   scripts: CFI/Scripts/\1
+# ERROR, ONLY HAS JS FILES
 
-# - url: /cfi/php/(.+\.php)$
-#   script: /CFI/PHP/\1
+- url: /cfi/scripts
+  static_dir: cfi/scripts
 
-# - url: /cfi/Map Shot/(.+\.php)$
-#   script: /CFI/Map Shot/\1
+- url: /cfi/php/(.+\.php)$
+  script: CFI/PHP/\1
+
+- url: /cfi/Map Shot/(.+\.php)$
+  script: /FI/Map Shot/\1
 
 # - url: /cfi/Map Shot/map.htm
 #   static_files: CFI/Map Shot/map.htm
