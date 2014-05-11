@@ -111,6 +111,11 @@ handlers:
   static_files: CFI/Map%20Shot/test.htm
   upload: CFI/Map%20Shot/test.htm
 
+- url: /cfi/Map%20Shot/my.png
+  static_files: CFI/Map%20Shot/my.png
+  upload: CFI/Map%20Shot/my.png
+
+
 
 # map.htm
 # map2.htm
