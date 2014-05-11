@@ -60,6 +60,7 @@ handlers:
 - url: /cfi/bob.js
   static_dir: /CFI/bob.js
 
+
 - url: /cfi/(.*\.(gif|png|jpg))$
   static_files: CFI/\1
   upload: CFI/.*\.(gif|png|jpg)$
@@ -79,6 +80,10 @@ handlers:
 - url: /cfi/
   static_files: CFI/main.htm
   upload: CFI/main.htm
+
+- url: /cfi/scripts/(.+\.php)$
+  static_files: CFI/scripts/\1
+  upload: CFI/scripts/\1
 
 # - url: /cfi/php/(.+\.php)$
 #   script: /CFI/PHP/\1
