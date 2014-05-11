@@ -57,8 +57,8 @@ handlers:
   static_files: CFI/index.html
   upload: CFI/index.html
 
-- url: /cfi
-  static_dir: /CFI
+- url: /cfi/bob.js
+  static_dir: /CFI/bob.js
 
 - url: /cfi/(.*\.(gif|png|jpg))$
   static_files: CFI/\1
