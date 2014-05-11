@@ -36,6 +36,13 @@ handlers:
 - url: /maps/
   static_files: maps/map.html
   upload: maps/map.html
+    - url: /cfi/welcome.htm
+  static_files: CFI/welcome.htm
+  upload: CFI/welcome.htm
+
+- url: /cfi/(.+)\.htm$
+  static_files: CFI/\1
+  upload: CFI/*\.htm$
 
 - url: /cfi/(.+\.php)$
   script: CFI/\1
@@ -44,15 +51,14 @@ handlers:
   static_files: CFI/\1
   upload: CFI/*\.html$
 
-- url: /cfi/(.+)\.htm$
-  static_files: CFI/\1
-  upload: CFI/*\.htm$
+
 
 - url: /cfi/
   static_files: CFI/main.htm
   upload: CFI/main.htm
 
-
+- url: /cfi/php/(.+\.php)$
+  script: /CFI/PHP/\1
 
 
 
