@@ -86,8 +86,8 @@ handlers:
   static_files: CFI/main.htm
   upload: CFI/main.htm
 
-# - url: /cfi/scripts/(.+\.php)$
-#   scripts: CFI/Scripts/\1
+- url: /cfi/scripts/(.+\.php)$
+  scripts: CFI/Scripts/\1
 
 # - url: /cfi/php/(.+\.php)$
 #   script: /CFI/PHP/\1
