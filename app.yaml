@@ -91,25 +91,25 @@ handlers:
 # ERROR, ONLY HAS JS FILES
 
 - url: /cfi/scripts
-  static_dir: cfi/scripts
+  static_dir: CFI/scripts
 
 - url: /cfi/php/(.+\.php)$
   script: CFI/PHP/\1
 
-- url: /cfi/Map Shot/(.+\.php)$
-  script: /CFI/Map Shot/\1
+- url: /cfi/Map%20Shot/(.+\.php)$
+  script: /CFI/Map%20Shot/\1
 
-- url: /cfi/Map Shot/map.htm
-  static_files: CFI/Map Shot/map.htm
-  upload: CFI/Map Shot/map.htm
+- url: /cfi/Map%20Shot/map.htm
+  static_files: CFI/Map%20Shot/map.htm
+  upload: CFI/Map%20Shot/map.htm
 
-- url: /cfi/Map Shot/map2.htm
-  static_files: CFI/Map Shot/map2.htm
-  upload: CFI/Map Shot/map2.htm
+- url: /cfi/Map%20Shot/map2.htm
+  static_files: CFI/Map%20Shot/map2.htm
+  upload: CFI/Map%20Shot/map2.htm
 
-- url: /cfi/Map Shot/test.htm
-  static_files: CFI/Map Shot/test.htm
-  upload: CFI/Map Shot/test.htm
+- url: /cfi/Map%20Shot/test.htm
+  static_files: CFI/Map%20Shot/test.htm
+  upload: CFI/Map%20Shot/test.htm
 
 
 # map.htm
