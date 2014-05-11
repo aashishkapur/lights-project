@@ -82,11 +82,30 @@ handlers:
   upload: CFI/main.htm
 
 - url: /cfi/scripts/(.+\.php)$
-  static_files: CFI/scripts/\1
-  upload: CFI/scripts/\1
+  scripts: CFI/Scripts/\1
 
-# - url: /cfi/php/(.+\.php)$
-#   script: /CFI/PHP/\1
+- url: /cfi/php/(.+\.php)$
+  script: /CFI/PHP/\1
+
+- url: /cfi/Map Shot/(.+\.php)$
+  script: /CFI/Map Shot/\1
+
+- url: /cfi/Map Shot/map.htm
+  static_files: CFI/Map Shot/map.htm
+  upload: CFI/Map Shot/map.htm
+
+- url: /cfi/Map Shot/map2.htm
+  static_files: CFI/Map Shot/map2.htm
+  upload: CFI/Map Shot/map2.htm
+
+- url: /cfi/Map Shot/test.htm
+  static_files: CFI/Map Shot/test.htm
+  upload: CFI/Map Shot/test.htm
+
+
+# map.htm
+# map2.htm
+# test.htm
 
 
 
