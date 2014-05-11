@@ -38,19 +38,19 @@ handlers:
   upload: maps/map.html
 
 - url: /cfi/(.+\.php)$
-  script: cfi/\1
+  script: CFI/\1
 
 - url: /cfi/(.+)\.html$
-  static_files: cfi/\1
-  upload: maps/*\.html$
+  static_files: CFI/\1
+  upload: CFI/*\.html$
 
 - url: /cfi/(.+)\.htm$
-  static_files: cfi/\1
-  upload: cfi/*\.htm$
+  static_files: CFI/\1
+  upload: CFI/*\.htm$
 
 - url: /cfi/
-  static_files: cfi/main.htm
-  upload: cfi/main.htm
+  static_files: CFI/main.htm
+  upload: CFI/main.htm
 
 
 
