@@ -1,0 +1,78 @@
+ <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+<br><br>
+Share Location
+<p id="demo"></p>
+
+<script>
+	var x=document.getElementById("demo");
+	function getLocation() {
+		if (navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(showPosition);
+		}
+		else {
+			x.innerHTML="Geolocation is not supported by this browser.";
+		}
+	}
+
+	function showPosition(position) {
+		var lat = position.coords.latitude;
+		var longi=  position.coords.longitude;	
+		myLocation( lat, longi);
+		
+	}
+	
+	function myLocation(lat,  longi)  {
+		var xmlhttp=new XMLHttpRequest();
+		xmlhttp.onreadystatechange=function() {
+			if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+				var data =JSON.parse(xmlhttp.responseText);
+				var timeup = parseInt(data);
+				var d = new Date();
+				var n = d.getTime();
+				var mewtime = parseInt(n);
+				var bitchtime = (mewtime/1000) - (timeup);
+				alert("Time Updated: " + timeup);
+				alert("Current Time: " + mewtime);
+				alert("You have updated your time "  + bitchtime + " seconds ago");
+			}
+		}
+		var string = "shareloc.php?lat=" + lat + "&long=" + longi;
+		xmlhttp.open("GET",string, true);
+		xmlhttp.send();
+	}
+	
+	
+	
+</script>
+
+<button onclick="getLocation()">Set New Location Flare</button>
+
+
+<br><br>
+Current Requests:<br>
+<iframe src="currequests.php" height="100"></iframe>
+
+
+<br><br>
+<script>
+function sub () {
+	var bob = document.getElementById('sum').value;
+	bob = bob.substring(bob.indexOf("-")+2, bob.indexOf("(")-1);
+	bob = "user.php?ID=" + bob;
+	document.getElementById('transcendentalism').src = bob;
+}
+</script>
+
+<form action="Javascript: sub()">
+Search For New Family/ Friends
+<script src="search.js" > </script>
+<input list="search" id ='sum' x-webkit-speech>
+  <datalist id="search">
+  
+</datalist></input>
+<input type="submit">
+</form>
+<iframe id="transcendentalism" name="transcendentalism"></iframe>

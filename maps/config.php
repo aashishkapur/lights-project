@@ -17,7 +17,7 @@ $db_conn = mysql_connect(':/cloudsql/lights-project:abcdef',
   );
 if(!$db_conn)
 {
-	die("fywbdhjkjngihdjknvclm;sdfghirujknfgjhouinj<br/>" . mysql_error());
+	die("<br/>" . mysql_error());
 }
 
 // echo 'abcdef';

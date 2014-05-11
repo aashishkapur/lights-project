@@ -1,0 +1,175 @@
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+<div data-role="page" id="sn" style="height:100%;">
+	<div data-role="header">
+		<h1>Login</h1>
+	</div>
+	<iframe src="welcome.htm" height="100%" width="100%"></iframe>
+	<div data-role="footer" style="position:fixed;bottom:0;width:100%;">
+        <div data-role="navbar" data-iconpos="bottom">
+            <ul>
+                <li><a data-transition="fade" href="#pageone" data-icon="grid"  class="ui-btn-active">Social Network</a></li>
+                <li><a data-transition="fade" href="#nearby" data-icon="gear">Nearby Shelters</a></li>
+				<li><a data-transition="fade" href="#review" data-icon="gear">Review Shelter</a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div><!-- /footer -->
+</div>
+
+<div data-role="page" id="pageone" style="height:100%;">
+	<script src="Scripts/index.js"></script>
+	<script src="Scripts/isloggedin.js"></script>
+	<div data-role="header">
+		<h1>Login</h1>
+	</div>
+	<center><br><h2>
+		<img src="logo.png" ></img><br>
+	Welcome to the Lights App!  </h2>
+	<div style="color:red;"id="Error"></div>
+	<form action="Javascript: bob();">
+		<div data-role="fieldcontain" style="width:75%;">
+			<input placeholder="Email" type="text" name="email" id="email" value="" required>
+		</div>
+		<div data-role="fieldcontain" style="width:75%;">
+			<input placeholder="Password" type="password" name="password" id="password" value="" required>
+		</div>
+
+	<button data-transition="fade" href="#userpage" type="submit" style="width:50%;" class="ui-btn ui-corner-all">Tap to Login</button>
+		</form>
+	<a data-transition="fade" href="#create" style="width:50%;" class="ui-btn ui-corner-all">Create an Account</a>
+	<a id="t1" href="#create"  data-transition="pop" style="width:0%;" ></a>
+    <div data-role="footer" style="position:fixed;bottom:0;width:100%;">
+        <div data-role="navbar" data-iconpos="bottom">
+            <ul>
+                <li><a data-transition="fade" href="#pageone" data-icon="grid"  class="ui-btn-active">Social Network</a></li>
+                <li><a data-transition="fade" href="#nearby" data-icon="gear">Nearby Shelters</a></li>
+				<li><a data-transition="fade" href="#review" data-icon="gear">Review Shelter</a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div><!-- /footer -->
+</div>
+<div data-role="page" id="nearby" style="height:100%;">
+	<iframe style="height:50%; width:100%;"src="Map Shot/map.htm"></iframe><center>
+	<div id ="YOLO1"></div>
+	<img src="http://www.sbunderground.com/wp-content/uploads/2013/11/dividing-line1.png" height="5%" width="100%"></img>
+	<div id="YOLO2"></div>
+	<img src="http://www.sbunderground.com/wp-content/uploads/2013/11/dividing-line1.png" height="5%" width="100%"></img>
+	<div id="YOLO3"></div>
+	<div data-role="footer" style="position:fixed;bottom:0;width:100%;">
+        <div data-role="navbar" data-iconpos="bottom">
+            <ul>
+                <li><a data-transition="fade" href="#pageone" data-icon="grid" >Social Network</a></li>
+                <li><a data-transition="fade" href="#nearby" data-icon="gear"  class="ui-btn-active">Nearby Shelters</a></li>
+				<li><a data-transition="fade" href="#review" data-icon="gear">Review Shelter</a></li>
+            </ul>
+        </div><!-- /navbar -->
+	<script src="nearby.js"></script>
+	
+    </div><!-- /footer -->
+</div>
+<div data-role="page" id="review" style="height:100%;margin-left: 10px;margin-right:10px;">
+	<script src="review.js"></script>
+	<form action="Javascript:OMGOMGOMG();">
+		
+		<div class="ui-field-contain">
+			<label for="select-native-1">Choose Shelter:</label>
+			<select name="select-native-1" id="select-native-1">
+				<option value="Bengaluru">Bengaluru</option>
+				<option value="Punjab">Punjab</option>
+				<option value="Mumbai">Mumbai</option>
+				<option value="New Dehli">New Dehli</option>
+				<option value="Sitapuram">Sitapuram</option>
+				<option value="Sirsi">Sirsi</option>
+				<option value="Calcutta">Calcutta</option>
+				<option value="Solapur">Solapur</option>
+				<option value="Jamnagar">Jamnagar</option>
+				<option value="Lakhput">Lakhput</option>
+				<option value="Putna">Putna</option>
+				<option value="Amritsar">Amritsar</option>
+				<option value="Bhopal">Bhopal</option>
+				<option value="Chandigarh">Chandigarh</option>
+				<option value="Faridabad">Faridabad</option>
+				<option value="Jaipur">Jaipur</option>
+				<option value="Hyderabad">Hyderabad</option>
+				<option value="Chirala">Chirala</option>
+				<option value="Dharwad">Dharwad</option>
+
+			</select>
+		</div>
+		
+		<label for="comfort">Comfort:</label>
+		<input type="range" name="comfort" id="comfort" data-highlight="true" min="0" max="10" value="5"></input>
+		<label for="food">Food:</label>
+		<input type="range" name="food" id="food" data-highlight="true" min="0" max="10" value="5"></input>
+		<label for="power">Power Availibility:</label>
+		<input type="range" name="power" id="power" data-highlight="true" min="0" max="10" value="5"></input>
+		<label for="medical">Medical Services:</label>
+		<input type="range" name="medical" id="medical" data-highlight="true" min="0" max="10" value="5"></input>
+		<label for="space">Ocupation Capacity:</label>
+		<input type="range" name="space" id="space" data-highlight="true" min="0" max="10" value="5"></input>
+		<label for="latitude">Latitude:</label>
+		<input type="range" name="latitude" id="latitude" data-highlight="true" min="0" max="10" value="5"></input>
+		<label for="longitude">Longitude:</label>
+		<input type="range" name="longitude" id="longitude" data-highlight="true" min="0" max="10" value="5"></input>
+		<label for="stability">Stability:</label>
+		<input type="range" name="stability" id="stability" data-highlight="true" min="0" max="10" value="5"></input>
+		<label for="water">Water:</label>
+		<input type="range" name="water" id="water" data-highlight="true" min="0" max="10" value="5"></input>
+		<label for="clothing">Clothing:</label>
+		<input type="range" name="clothing" id="clothing" data-highlight="true" min="0" max="10" value="5"></input>
+		<label for="sanitation">Sanitation:</label>
+		<input type="range" name="sanitation" id="sanitation" data-highlight="true" min="0" max="10" value="5"></input>
+		<label for="completion">Completion:</label>
+		<input type="range" name="completion" id="completion" data-highlight="true" min="0" max="10" value="5"></input>
+		<button type="submit" class="ui-btn ui-corner-all">Submit Review</button>
+	</form>
+ <div data-role="footer" style="position:fixed;bottom:0;width:100%;">
+        <div data-role="navbar" data-iconpos="bottom">
+            <ul>
+                <li><a data-transition="fade" href="#pageone" data-icon="grid"  >Social Network</a></li>
+                <li><a data-transition="fade" href="#nearby" data-icon="gear">Nearby Shelters</a></li>
+				<li><a data-transition="fade" href="#review" data-icon="gear" class="ui-btn-active">Review Shelter</a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div><!-- /footer -->
+</div>
+<div  data-role="page" id="create" style="height:100%;"> 
+	<center>
+	<script src="Scripts/newaccount.js"></script>
+	<!-- This is where all the error messages and shit will show up-->
+	<form action="Javascript:checkCreds();" method="post" autocomplete="on">
+		<div data-role="header">
+			<h1>New Account</h1>
+		</div>
+		<div style="color:red;"id="Error"></div> 
+		<div data-role="fieldcontain" style="width:75%;">
+			<input id="Name" type="text"placeholder="Full Name" required  </input>
+		</div>
+		<div data-role="fieldcontain" style="width:75%;">
+			<input id="Email"  type="email"  placeholder="Email Address" required> </input>
+		</div>
+		<div data-role="fieldcontain" style="width:75%;">
+			<input id="Password" type="password"  placeholder="Password" required> </input>
+		</div>
+		<div data-role="fieldcontain" style="width:75%;">
+			<input id="Confirm Password" type="password"  placeholder="Confirm Password" required> </input>
+		</div>
+		<div data-role="fieldcontain" style="width:75%;">
+			<input id="Address" type="text"  placeholder="Address" required> </input>
+		</div>
+		<div data-role="fieldcontain" style="width:55%;">
+			<button href="#pageone" data-transition="fade" type="submit"  class="ui-btn ui-corner-all"> Create Account</a>
+		</div>
+		<a data-transition="fade" href="#pageone" style="width:50%;" class="ui-btn ui-corner-all">Back to Login</a>
+	</form>
+	 <div data-role="footer" style="position:fixed;bottom:0;width:100%;">
+        <div data-role="navbar" data-iconpos="bottom">
+            <ul>
+                <li><a data-transition="fade" href="#pageone" data-icon="grid"  class="ui-btn-active">Social Network</a></li>
+                <li><a data-transition="fade" href="#nearby" data-icon="gear">Nearby Shelters</a></li>
+				<li><a data-transition="fade" href="#review" data-icon="gear">Review Shelter</a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div><!-- /footer -->
+</div>

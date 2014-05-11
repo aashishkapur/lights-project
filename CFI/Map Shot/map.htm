@@ -1,0 +1,76 @@
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script>
+	getData();
+	var arr = new Array(40);
+	function getData()  {
+		var xmlhttp=new XMLHttpRequest();
+		xmlhttp.onreadystatechange=function() {
+			if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+				var data=JSON.parse(xmlhttp.responseText);
+				console.log(data);
+				console.log(data[0]);
+				for (var x = 0; x < data.length; x++ ) {
+					var myLatlng = new google.maps.LatLng(data[x][0],data[x][1]);
+					arr[x] = myLatlng;
+					console.log(arr[x]);
+
+				}
+				initialize(arr);
+			}
+		}
+		xmlhttp.open("GET","locations.php" ,true);
+		xmlhttp.send();
+	}
+	function initialize(arr) {
+  var mapOptions = {
+    zoom: 4,
+    center: arr[0]
+  }
+  console.log(arr[0]);
+  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  for (var x = 0; x < arr.length; x++) {
+	if (arr[x] != null) {
+		var marker = new google.maps.Marker({
+			position: arr[x],
+			map: map,
+			title: 'Hello World!'
+		});
+	}
+  }
+  var initialLocation;
+  if(navigator.geolocation) {
+    browserSupportFlag = true;
+    navigator.geolocation.getCurrentPosition(function(position) {
+      initialLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+	 var myFuckingLocation = new google.maps.Marker({
+	position: initialLocation,
+	map: map,
+	title: 'VineetZavala',
+	icon: 'my.png' 
+}); 
+	  map.setCenter(initialLocation);
+    }, function() {
+      handleNoGeolocation(browserSupportFlag);
+    });
+  }
+ 
+
+
+  
+ 
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+
+  <body>
+    <div id="map-canvas"></div>
+  </body>
+  
