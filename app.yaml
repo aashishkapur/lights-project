@@ -41,6 +41,24 @@ handlers:
   static_files: CFI/welcome.htm
   upload: CFI/welcome.htm
 
+- url: /cfi/main.htm
+  static_files: CFI/main.htm
+  upload: CFI/main.htm
+
+- url: /cfi/newaccount.html
+  static_files: CFI/newaccount.html
+  upload: CFI/newaccount.html
+
+- url: /cfi/maps.htm
+  static_files: CFI/maps.htm
+  upload: CFI/maps.htm
+
+- url: /cfi/index.html
+  static_files: CFI/index.html
+  upload: CFI/index.html
+
+
+
 - url: /cfi/(.+)\.htm$
   static_files: CFI/\1
   upload: CFI/*\.htm$
