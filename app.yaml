@@ -36,5 +36,26 @@ handlers:
 - url: /maps/
   static_files: maps/map.html
   upload: maps/map.html
-# - url: /todo.txt
-#   static_files: todo.txt
+
+- url: /cfi/(.+\.php)$
+  script: cfi/\1
+
+- url: /cfi/(.+)\.html$
+  static_files: cfi/\1
+  upload: maps/*\.html$
+
+- url: /cfi/(.+)\.htm$
+  static_files: cfi/\1
+  upload: cfi/*\.htm$
+
+- url: /cfi/
+  static_files: cfi/main.htm
+  upload: cfi/main.htm
+
+
+
+
+
+
+
+
