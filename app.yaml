@@ -66,9 +66,14 @@ handlers:
   upload: CFI/.*\.(gif|png|jpg)$
 
 
+- url: /cfi/logo.png
+  static_files: CFI/logo.png
+  upload: CFI/logo.png
+
 - url: /cfi/(.+)\.htm$
   static_files: CFI/\1
   upload: CFI/*\.htm$
+
 
 - url: /cfi/(.+\.php)$
   script: CFI/\1
