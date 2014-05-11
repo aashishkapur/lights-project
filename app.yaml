@@ -97,7 +97,7 @@ handlers:
   script: CFI/PHP/\1
 
 - url: /cfi/Map Shot/(.+\.php)$
-  script: /FI/Map Shot/\1
+  script: /CFI/Map Shot/\1
 
 - url: /cfi/Map Shot/map.htm
   static_files: CFI/Map Shot/map.htm
