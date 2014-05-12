@@ -101,15 +101,15 @@ handlers:
 - url: /cfi/Map-Shot/(.+\.php)$
   script: /CFI/Map-Shot/\1
 
-- url: /cfi/Map-Shot/map.htm
+- url: /cfi/Map-Shot/map\.htm
   static_files: CFI/Map-Shot/map.htm
   upload: CFI/Map-Shot/map.htm
 
-- url: /cfi/Map-Shot/map2.htm
+- url: /cfi/Map-Shot/map2\.htm
   static_files: CFI/Map-Shot/map2.htm
   upload: CFI/Map-Shot/map2.htm
 
-- url: /cfi/Map-Shot/test.htm
+- url: /cfi/Map-Shot/test\.htm
   static_files: CFI/Map-Shot/test.htm
   upload: CFI/Map-Shot/test.htm
 
