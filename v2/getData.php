@@ -11,9 +11,11 @@
 		$lat = $row['Latitude'];
 		$lng = $row['Longitude'];
 
-		$array = array('lat' => $lat, 'lng' => $lng);
+		$array = array("lat" => $lat, "lng" => $lng);
 		echo json_encode($array);
 		//json_encode($array);
 	}
+	else
+		echo "{}";
 
 ?>
