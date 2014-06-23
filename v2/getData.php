@@ -16,6 +16,6 @@
 		//json_encode($array);
 	}
 	else
-		echo "{a:a}";
+		echo "{\"a\": \"a\"}";
 
 ?>
