@@ -66,13 +66,19 @@
 								content: contentString
 							}));
 							
-							google.maps.event.addListener(
-									markers[id], 'click', function(actualID) {
-									return function() {
-										infoWindows[actualID].open(map,markers[actualID]);
-								}
-							}(id));
+							// google.maps.event.addListener(
+							// 		markers[id], 'click', function(actualID) {
+							// 		return function() {
+							// 			infoWindows[actualID].open(map,markers[actualID]);
+							// 	}
+							// }(id));
 
+							//from google:
+							google.maps.event.addListener(markers[0], 'click', function() {
+								infoWindows[0].open(map,markers[0]);
+							});
+
+							//stack overflow
 							// google.maps.event.addListener(
 							// 	markers[key], 'click', function(innerKey) {
 							//   return function() {
