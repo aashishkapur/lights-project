@@ -43,12 +43,12 @@
 
 							//console.log(id);
 							//alert(data);
-							markers[id] = new google.maps.Marker({
+							markers.push(new google.maps.Marker({
 								position: new google.maps.LatLng
 								(data.lat, data.lng),
 								map: map,
 								title:"Marker: " + id + "!"
-							});
+							}));
 						},
 						//look here, probably problems dealing with getting json data from getData.php
 						//http://stackoverflow.com/questions/8951810/how-to-parse-json-data-with-jquery-javascript
