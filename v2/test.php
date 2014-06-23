@@ -25,7 +25,7 @@
 				var markers = [];
 				var infoWindows = [];
 				var id = 0;
-				for (id = 0; id == 0; id++)
+				for (id = 0; id <= 2; id++)
 				{
 					///console.log("beginning id:" + id);
 					var request = $.ajax({
@@ -75,8 +75,8 @@
 							// }(id));
 
 							//from google:
-							google.maps.event.addListener(markers[0], 'click', function() {
-								infoWindows[0].open(map,markers[0]);
+							google.maps.event.addListener(markers[id], 'click', function() {
+								infoWindows[id].open(map,markers[id]);
 							});
 
 							//stack overflow
