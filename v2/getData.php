@@ -12,7 +12,7 @@
 		$lng = $row['Longitude'];
 
 		$array = array('lat' => $lat, 'lng' => $lng);
-		echo json_encode($array);;
+		echo json_encode($array);
 		//json_encode($array);
 	}
 
