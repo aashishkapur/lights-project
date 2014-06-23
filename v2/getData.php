@@ -14,6 +14,7 @@
 		// $array = array("lat" => $lat, "lng" => $lng);
 
 		$array = array(
+			"name" => $row['Name']
 			"lat" => $row['Latitude'], 
 			"lng" => $row['Longitude'], 
 			"comfort" => $row['Comfort'],

@@ -66,8 +66,8 @@
 							}));
 							
 							google.maps.event.addListener(
-									markers[id], 'click', function() {
-								infoWindows[id].open(map,markers[id]);
+									markers[0], 'click', function() {
+								infoWindows[0].open(map,markers[0]);
 							});
 
 						},
