@@ -20,14 +20,11 @@
 				var map = new google.maps.Map(document.getElementById("map-canvas"),
 						mapOptions);
 
-				//alert("start loop");
-				//console.log("start loop");
 				var markers = [];
 				var infoWindows = [];
 				var id = 0;
 				for (id = 0; id <= 2; id++)
 				{
-					///console.log("beginning id:" + id);
 					var request = $.ajax({
 						type: "GET",
 						url: "getData.php",
@@ -69,19 +66,19 @@
 
 							//console.log("infowindows[" + id+ "]: " + infoWindows[id]);
 							
-							alert(id);
-							google.maps.event.addListener(
-								markers[id], 'click', 
-								function(actualID) {
-									return function() {
-										infoWindows[id].open(map,markers[id]);
-									}
-							}(id));
+							// alert(id);
+							// google.maps.event.addListener(
+							// 	markers[id], 'click', 
+							// 	function(actualID) {
+							// 		return function() {
+							// 			infoWindows[id].open(map,markers[id]);
+							// 		}
+							// }(id));
 
 							//from google:
-							google.maps.event.addListener(markers[id], 'click', function(){
-								infoWindows[id].open(map,markers[id]);
-							});
+							// google.maps.event.addListener(markers[id], 'click', function(){
+							// 	infoWindows[id].open(map,markers[id]);
+							// });
 
 							//stack overflow
 							// google.maps.event.addListener(
@@ -100,7 +97,6 @@
 
 						},
 						error: function(xhr, textStatus, errorThrown){
-							//alert("error, i: " + id + "   responseText:" + xhr.responseText);
 							console.log("statusText: " + xhr.statusText);
 							console.log("textStatus: " + textStatus);
 							console.log("errorThrown: " + errorThrown);
@@ -109,12 +105,12 @@
 				}
 			}
 			// use google.maps.event.addListener(markersArray[x], 'click', makeMapListener(inforwindowArray[x], map, markersArray[x]));
-			function makeMapListener(window, map, markers)
-			{
- 				return function(){
- 					window.open(map, markers);
- 				};
-			}
+			// function makeMapListener(window, map, markers)
+			// {
+ 		// 		return function(){
+ 		// 			window.open(map, markers);
+ 		// 		};
+			// }
 			google.maps.event.addDomListener(window, 'load', initialize);
 		</script>
 	</head>
