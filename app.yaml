@@ -17,10 +17,13 @@ handlers:
 
 #-------------------------------------
 - url: /v2/
-  script: v2/test.php
+  script: v2/a.php
 
-- url: /v2/test.php
-  script: v2/test.php
+# - url: /v2/test.php
+#   script: v2/test.php
+
+- url: /v2/(.+\.php)
+  script: v2/\1
 
 #-------------------------------------
 - url: /maps/map\.html
