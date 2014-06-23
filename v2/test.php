@@ -25,7 +25,7 @@
 				var markers = [];
 				var infoWindows = [];
 				var id = 0;
-				for (id = 0; id == 0; id++)
+				for (id = 0; id <= 3; id++)
 				{
 					///console.log("beginning id:" + id);
 					var request = $.ajax({
@@ -48,15 +48,15 @@
 								'<h1 id="firstHeading" class="firstHeading">data.name</h1>'+
 								'<div id="bodyContent">'+
 									'<p>' + 
-										'<b>comfort:</b> data.comfort <br/>' + 
-										'<b>food:</b> data.food <br/>' + 
-										'<b>power:</b> data.power <br/>' + 
-										'<b>space:</b> data.space <br/>' + 
-										'<b>stability:</b> data.stability <br/>' + 
-										'<b>water:</b> data.water <br/>' + 
-										'<b>clothing:</b> data.clothing <br/>' + 
-										'<b>sanitation:</b> data.sanitation <br/>' + 
-										'<b>completion:</b> data.completion <br/>' + 
+										'<b>comfort:</b>' + data.comfort + '<br/>' + 
+										'<b>food:</b>' + data.food + '<br/>' + 
+										'<b>power:</b>' + data.power + '<br/>' + 
+										'<b>space:</b>' + data.space + '<br/>' + 
+										'<b>stability:</b>' + data.stability +'<br/>' + 
+										'<b>water:</b>' + data.water + '<br/>' + 
+										'<b>clothing:</b>' + data.clothing + '<br/>' + 
+										'<b>sanitation:</b>'+data.sanitation +'<br/>' + 
+										'<b>completion:</b>'+data.completion +'<br/>' + 
 									'</p>' + 
 								'</div>' + 
 							'</div>';
@@ -66,8 +66,8 @@
 							}));
 							
 							google.maps.event.addListener(
-									markers[0], 'click', function() {
-								infoWindows[0].open(map,markers[0]);
+									markers[id], 'click', function() {
+								infoWindows[id].open(map,markers[id]);
 							});
 
 						},
