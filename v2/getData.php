@@ -25,7 +25,7 @@
 			"clothing" => $row['Clothing'], 
 			"sanitation" => $row['Sanitation'], 
 			"completion" => $row['Completion'], 
-			"name" => $row['name']
+			"name" => $row['Name']
 			);
 
 
