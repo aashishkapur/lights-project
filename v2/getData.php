@@ -14,7 +14,7 @@
 		// $array = array("lat" => $lat, "lng" => $lng);
 
 		$array = array(
-			"name" => $row['Name']
+			"name" => $row['Name'],
 			"lat" => $row['Latitude'], 
 			"lng" => $row['Longitude'], 
 			"comfort" => $row['Comfort'],
@@ -26,7 +26,6 @@
 			"clothing" => $row['Clothing'], 
 			"sanitation" => $row['Sanitation'], 
 			"completion" => $row['Completion'], 
-			"name" => $row['Name']
 			);
 
 		echo json_encode($array);
