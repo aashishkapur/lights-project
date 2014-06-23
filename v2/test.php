@@ -20,6 +20,7 @@
 				var map = new google.maps.Map(document.getElementById("map-canvas"),
 						mapOptions);
 
+				alert("start loop");
 				var markers = [];
 				for (var id = 0; id >= 15; id++)
 				{
@@ -29,7 +30,7 @@
 						data: "id=" + id,
 						datatype: 'json',
 						success: function (data) {
-							
+
 							console.log(id);
 							alert(data);
 							markers[id] = new google.maps.Marker({
@@ -47,6 +48,7 @@
 						}
 					});
 				};
+				alert("end loop");
 			}
 			google.maps.event.addDomListener(window, 'load', initialize);
 		</script>
