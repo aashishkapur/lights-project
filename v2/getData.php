@@ -2,7 +2,7 @@
 
 	include ('config.php');
 	header('Content-type: application/json');
-	if (isset($_REQUEST['id']) || isset($_GET['id']))
+	if (isset($_GET['id']))
 	{
 		$id = intval($_GET['id']);
 		$query =  "SELECT * FROM `locations` WHERE id='$id'";
