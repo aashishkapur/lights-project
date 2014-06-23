@@ -2,7 +2,7 @@
 
 $conn = mysql_connect(':/cloudsql/lights-project:abcdef',
   'root', // username
-  'root'  // password
+  ''  // password
   );
 if(!$conn)
 {
