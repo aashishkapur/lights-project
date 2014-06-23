@@ -41,7 +41,6 @@
 						data: {"id" : JSON.stringify(id)},
 						dataType: 'json',
 						success: function (data) {
-
 							console.log(data);
 							alert(data);
 							var tempMarker = new google.maps.Marker({
