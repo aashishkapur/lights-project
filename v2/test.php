@@ -20,45 +20,37 @@
 				var map = new google.maps.Map(document.getElementById("map-canvas"),
 						mapOptions);
 
-				var m =	new google.maps.Marker({
-					position: new google.maps.LatLng
-					(0, 0),
-					map: map,
-					title:"Marker: " + 3 + "!"
-				});
-
-
 				alert("start loop");
 				//console.log("start loop");
 				var markers = [];
 				var id = 0;
 				for (id = 0; id <= 15; id++)
 				{
-					console.log("beginning id:" + id);
+					///console.log("beginning id:" + id);
 					var request = $.ajax({
 						type: "GET",
 						url: "getData.php",
 						data: "id=" + id,
 						dataType: 'json',
 						success: function (data) {
-							console.log(data);
-							alert(data);
+							//console.log(data);
+							//alert(data);
 							var tempMarker = new google.maps.Marker({
 								position: new google.maps.LatLng
 								(parseInt(data.lat), parseInt(data.lng)),
 								map: map,
-								title:"Marker: " + id + "!"
+								title:"Marker " + id + "!"
 							});
 						},
 						error: function(xhr, textStatus, errorThrown){
-							alert("error, i: " + id + "   responseText:" + xhr.responseText);
+							//alert("error, i: " + id + "   responseText:" + xhr.responseText);
 							console.log("statusText: " + xhr.statusText);
 							console.log("textStatus: " + textStatus);
 							console.log("errorThrown: " + errorThrown);
 						}
 					});
 				};
-				alert("end loop");
+				//alert("end loop");
 			}
 			google.maps.event.addDomListener(window, 'load', initialize);
 		</script>
