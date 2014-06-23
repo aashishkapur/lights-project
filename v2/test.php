@@ -38,8 +38,7 @@
 					var request = $.ajax({
 						type: "POST",
 						url: "getData.php",
-						data: "id=" + 4,
-						cache: false,
+						data: {"id" : JSON.stringify(id)},
 						dataType: 'json',
 						success: function (data) {
 
