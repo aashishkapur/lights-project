@@ -30,7 +30,7 @@
 						datatype: 'json',
 						success: function (data) {
 							console.log(id);
-							
+							alert("data");
 							markers[id] = new google.maps.Marker({
 								position: new google.maps.LatLng
 								(data.lat, data.lng),
