@@ -20,6 +20,14 @@
 				var map = new google.maps.Map(document.getElementById("map-canvas"),
 						mapOptions);
 
+				var m =	new google.maps.Marker({
+								position: new google.maps.LatLng
+								(0, 0),
+								map: map,
+								title:"Marker: " + 3 + "!"
+							});
+
+
 				alert("start loop");
 				console.log("start loop");
 				var markers = [];
