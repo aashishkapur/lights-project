@@ -55,8 +55,8 @@
 						//look here, probably problems dealing with getting json data from getData.php
 						//http://stackoverflow.com/questions/8951810/how-to-parse-json-data-with-jquery-javascript
 						//https://developers.google.com/maps/documentation/javascript/markers
-						error: function(errorText){
-							alert("error, i: " + id + "   " + errorText.responseText);
+						error: function(xhr, textStatus, errorThrown){
+							alert("error, i: " + id + "   " + xhr.responseText);
 						}
 					});
 				};
