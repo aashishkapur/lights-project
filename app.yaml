@@ -16,9 +16,9 @@ handlers:
   script: main.php
 
 #-------------------------------------
-- url: /maps/map.html
+- url: /maps/map\.html
   static_files: maps/map.html
-  upload: maps/map.html
+  upload: maps/map\.html
 
 - url: /map.php
   script: map.php
