@@ -16,6 +16,13 @@ handlers:
   script: main.php
 
 #-------------------------------------
+- url: /v2/
+  script: test.php
+
+- url: /v2/test.php
+  script: test.php
+
+#-------------------------------------
 - url: /maps/map\.html
   static_files: maps/map.html
   upload: /maps/map\.html
