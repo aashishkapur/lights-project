@@ -29,20 +29,20 @@
 
 
 				alert("start loop");
-				console.log("start loop");
+				//console.log("start loop");
 				var markers = [];
 				for (var id = 0; id >= 15; id++)
 				{
-					console.log("beginning id:" + id);
+					//console.log("beginning id:" + id);
 					var request = $.ajax({
 						type: "POST",
 						url: "getData.php",			            
 						data: "id=" + id,
-						datatype: 'json',
+						dataType: 'json',
 						success: function (data) {
 
-							console.log(id);
-							alert(data);
+							//console.log(id);
+							//alert(data);
 							markers[id] = new google.maps.Marker({
 								position: new google.maps.LatLng
 								(data.lat, data.lng),
