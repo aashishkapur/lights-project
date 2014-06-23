@@ -34,7 +34,7 @@
 						data: "id=" + id,
 						dataType: 'json',
 						success: function (data) {
-							
+
 							console.log(data);
 
 							markers.push(new google.maps.Marker({
@@ -88,8 +88,7 @@
 							console.log("errorThrown: " + errorThrown);
 						}
 					});
-				};
-				//alert("end loop");
+				}
 			}
 			google.maps.event.addDomListener(window, 'load', initialize);
 		</script>
