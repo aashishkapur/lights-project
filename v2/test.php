@@ -32,7 +32,7 @@
 				//console.log("start loop");
 				var markers = [];
 				var id = 0;
-				for (id = 0; id >= 15; id++)
+				for (id = 0; id <= 15; id++)
 				{
 					//console.log("beginning id:" + id);
 					var request = $.ajax({
