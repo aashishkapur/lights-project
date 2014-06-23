@@ -38,7 +38,7 @@
 					var request = $.ajax({
 						type: "POST",
 						url: "getData.php",			            
-						data: "id=" + id,
+						data: {'id': id},
 						cache: false,
 						dataType: 'json',
 						success: function (data) {
