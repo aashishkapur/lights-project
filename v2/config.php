@@ -3,6 +3,9 @@
 $conn = mysql_connect(':/cloudsql/lights-project:abcdef',
   'root', // username
   ''  // password
+  //******
+  //note: app engine does not use passwords when connecting
+  //******
   );
 if(!$conn)
 {
