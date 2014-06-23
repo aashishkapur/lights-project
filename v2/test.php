@@ -36,9 +36,9 @@
 				{
 					console.log("beginning id:" + id);
 					var request = $.ajax({
-						type: "POST",
+						type: "GET",
 						url: "getData.php",
-						data: {"id" : JSON.stringify(id)},
+						data: "id=" + id,
 						dataType: 'json',
 						success: function (data) {
 							console.log(data);
