@@ -20,11 +20,12 @@
 				var map = new google.maps.Map(document.getElementById("map-canvas"),
 						mapOptions);
 
-				alert("start loop");
+				//alert("start loop");
 				//console.log("start loop");
 				var markers = [];
+				var infoWindows = [];
 				var id = 0;
-				for (id = 0; id <= 15; id++)
+				for (id = 0; id == 0; id++)
 				{
 					///console.log("beginning id:" + id);
 					var request = $.ajax({
@@ -33,14 +34,42 @@
 						data: "id=" + id,
 						dataType: 'json',
 						success: function (data) {
-							//console.log(data);
-							//alert(data);
-							var tempMarker = new google.maps.Marker({
+							console.log(data);
+
+							markers.push(new google.maps.Marker({
 								position: new google.maps.LatLng
 								(parseInt(data.lat), parseInt(data.lng)),
 								map: map,
-								title:"Marker " + id + "!"
+								title: data.name
+							}));
+
+							var contentString = 
+							'<div id="content">'+
+								'<h1 id="firstHeading" class="firstHeading">data.name</h1>'+
+								'<div id="bodyContent">'+
+									'<p>' + 
+										'<b>comfort:</b> data.comfort <br/>' + 
+										'<b>food:</b> data.food <br/>' + 
+										'<b>power:</b> data.power <br/>' + 
+										'<b>space:</b> data.space <br/>' + 
+										'<b>stability:</b> data.stability <br/>' + 
+										'<b>water:</b> data.water <br/>' + 
+										'<b>clothing:</b> data.clothing <br/>' + 
+										'<b>sanitation:</b> data.sanitation <br/>' + 
+										'<b>completion:</b> data.completion <br/>' + 
+									'</p>' + 
+								'</div>' + 
+							'</div>';
+
+							infoWindows.push(new google.maps.InfoWindow({
+								content: contentString
+							}));
+							
+							google.maps.event.addListener(
+									markers[id], 'click', function() {
+								infoWindows[id].open(map,markers[id]);
 							});
+
 						},
 						error: function(xhr, textStatus, errorThrown){
 							//alert("error, i: " + id + "   responseText:" + xhr.responseText);
