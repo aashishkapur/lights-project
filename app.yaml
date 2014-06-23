@@ -101,6 +101,11 @@ handlers:
 - url: /cfi/Map-Shot/(.+\.php)$
   script: /CFI/Map-Shot/\1
 
+- url: /(.*\.html)
+  mime_type: text/html
+  static_files: static/\1
+  upload: static/(.*\.html)
+
 - url: /cfi/Map-Shot/map\.htm
   static_files: CFI/Map-Shot/map.htm
   upload: CFI/Map-Shot/map.htm
