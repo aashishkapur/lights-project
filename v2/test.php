@@ -66,6 +66,8 @@
 							infoWindows.push(new google.maps.InfoWindow({
 								content: contentString
 							}));
+
+							console.log("infowindows[" + id+ "]: " + infoWindows[id]);
 							
 							// google.maps.event.addListener(
 							// 		markers[id], 'click', function(actualID) {
@@ -75,7 +77,7 @@
 							// }(id));
 
 							//from google:
-							google.maps.event.addListener(markers[id], 'click', function() {
+							google.maps.event.addListener(markers[id], 'click', function(){
 								infoWindows[id].open(map,markers[id]);
 							});
 
