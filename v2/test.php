@@ -30,7 +30,7 @@
 						datatype: 'json',
 						success: function (data) {
 							console.log(id);
-							alert("data");
+							alert(data);
 							markers[id] = new google.maps.Marker({
 								position: new google.maps.LatLng
 								(data.lat, data.lng),
@@ -38,6 +38,8 @@
 								title:"Marker: " + id + "!"
 							});
 						},
+						//look here, probably problems dealing with getting json data from getData.php
+						//http://stackoverflow.com/questions/8951810/how-to-parse-json-data-with-jquery-javascript
 						error: function(){
 							alert("error, i: " + id);
 						}
