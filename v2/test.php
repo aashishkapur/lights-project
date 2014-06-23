@@ -68,9 +68,16 @@
 							google.maps.event.addListener(
 									markers[id], 'click', function(actualID) {
 									return function() {
-									infoWindows[actualID].open(map,markers[actualID]);
+										infoWindows[actualID].open(map,markers[actualID]);
 								}
 							}(id));
+
+							// google.maps.event.addListener(
+							// 	markers[key], 'click', function(innerKey) {
+							//   return function() {
+							//       infowindows[innerKey].open(map, markers[innerKey]);
+							//   }
+							// }(key));
 
 						},
 						error: function(xhr, textStatus, errorThrown){
