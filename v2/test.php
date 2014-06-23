@@ -10,7 +10,7 @@
 		<script type="text/javascript"
 			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfkyb50aOPYENbA1yUFLmda5th5UCR7cw">
 		</script>
-		 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		 <!-- // <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
 		<script type="text/javascript">
 			function initialize() {
 				var mapOptions = {
