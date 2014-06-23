@@ -21,9 +21,11 @@
 						mapOptions);
 
 				alert("start loop");
+				console.log("start loop");
 				var markers = [];
 				for (var id = 0; id >= 15; id++)
 				{
+					console.log("beginning id:" + id);
 					var request = $.ajax({
 						type: "POST",
 						url: "getData.php",			            
