@@ -47,7 +47,7 @@
 							alert(data);
 							var tempMarker = new google.maps.Marker({
 								position: new google.maps.LatLng
-								(data.lat, data.lng),
+								(parseInt(data.lat), parseInt(data.lng)),
 								map: map,
 								title:"Marker: " + id + "!"
 							});
