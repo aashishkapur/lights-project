@@ -4,7 +4,7 @@
 	header('Content-type: application/json');
 	if (isset($_GET['id']))
 	{
-		$id = $_GET['id'];
+		$id = intval($_GET['id']);
 		$query =  "SELECT * FROM `locations` WHERE id='$id'";
 		$result = mysql_query($query);
 		$row = mysql_fetch_array($result);
