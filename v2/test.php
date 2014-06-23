@@ -32,7 +32,7 @@
 				//console.log("start loop");
 				var markers = [];
 				var id = 0;
-				for (id = 1; id == 1; id++)
+				for (id = 4; id == 4; id++)
 				{
 					console.log("beginning id:" + id);
 					var request = $.ajax({
@@ -44,7 +44,7 @@
 						success: function (data) {
 
 							console.log(data);
-							//alert(data);
+							alert(data);
 							var tempMarker = new google.maps.Marker({
 								position: new google.maps.LatLng
 								(data.lat, data.lng),
@@ -52,9 +52,6 @@
 								title:"Marker: " + id + "!"
 							});
 						},
-						//look here, probably problems dealing with getting json data from getData.php
-						//http://stackoverflow.com/questions/8951810/how-to-parse-json-data-with-jquery-javascript
-						//https://developers.google.com/maps/documentation/javascript/markers
 						error: function(xhr, textStatus, errorThrown){
 							alert("error, i: " + id + "   " + xhr.responseText);
 							console.log("statusText: " + xhr.statusText);
