@@ -39,6 +39,7 @@
 						type: "POST",
 						url: "getData.php",			            
 						data: "id=" + id,
+						cache: false,
 						dataType: 'json',
 						success: function (data) {
 
