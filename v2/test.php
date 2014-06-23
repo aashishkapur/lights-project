@@ -67,13 +67,13 @@
 							//console.log("infowindows[" + id+ "]: " + infoWindows[id]);
 							
 							// alert(id);
-							// google.maps.event.addListener(
-							// 	markers[id], 'click', 
-							// 	function(actualID) {
-							// 		return function() {
-							// 			infoWindows[id].open(map,markers[id]);
-							// 		}
-							// }(id));
+							google.maps.event.addListener(
+								markers[id], 'click', 
+								function(id) {
+									return function() {
+										infoWindows[id].open(map,markers[id]);
+									}
+							}(id));
 
 							//from google:
 							// google.maps.event.addListener(markers[id], 'click', function(){
