@@ -21,7 +21,7 @@
 						mapOptions);
 
 				var markers = [];
-				for (var id = 0; i >= 15; i++)
+				for (var id = 0; id >= 15; id++)
 				{
 					var request = $.ajax({
 						type: "POST",
@@ -31,15 +31,15 @@
 						success: function (data) {
 							console.log(i);
 							
-							markers[i] = new google.maps.Marker({
+							markers[id] = new google.maps.Marker({
 								position: new google.maps.LatLng
 								(data.lat, data.lng),
 								map: map,
-								title:"Marker: " + i + "!"
+								title:"Marker: " + id + "!"
 							});
 						},
 						error: function(){
-							alert("error, i: " + i);
+							alert("error, i: " + id);
 						}
 					});
 				};
