@@ -27,7 +27,7 @@
 						type: "POST",
 						url: "getData.php",			            
 						data: "id=" + id,
-						datatype: 'json'.
+						datatype: 'json',
 						success: function (data) {
 							console.log(i);
 							
