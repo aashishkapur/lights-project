@@ -34,6 +34,7 @@
 						data: "id=" + id,
 						dataType: 'json',
 						success: function (data) {
+							
 							console.log(data);
 
 							markers.push(new google.maps.Marker({
@@ -65,12 +66,12 @@
 								content: contentString
 							}));
 							
-							google.maps.event.addListener(
-									markers[id], 'click', function(actualID) {
-									return function() {
-										infoWindows[actualID].open(map,markers[actualID]);
-								}
-							}(id));
+							// google.maps.event.addListener(
+							// 		markers[id], 'click', function(actualID) {
+							// 		return function() {
+							// 			infoWindows[actualID].open(map,markers[actualID]);
+							// 	}
+							// }(id));
 
 							// google.maps.event.addListener(
 							// 	markers[key], 'click', function(innerKey) {
