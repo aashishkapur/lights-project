@@ -32,9 +32,9 @@
 				//console.log("start loop");
 				var markers = [];
 				var id = 0;
-				for (id = 0; id <= 15; id++)
+				for (id = 1; id == 1; id++)
 				{
-					//console.log("beginning id:" + id);
+					console.log("beginning id:" + id);
 					var request = $.ajax({
 						type: "POST",
 						url: "getData.php",			            
@@ -43,7 +43,7 @@
 						dataType: 'json',
 						success: function (data) {
 
-							//console.log(id);
+							console.log(data);
 							//alert(data);
 							var tempMarker = new google.maps.Marker({
 								position: new google.maps.LatLng
