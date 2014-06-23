@@ -107,12 +107,12 @@
 				}//end loop
 
 			// use google.maps.event.addListener(markersArray[x], 'click', 	makeMapListener(inforwindowArray[x], map, markersArray[x]));
-			function makeMapListener(window, map, markers)
-			{
- 				return function(){
- 					window.open(map, markers);
- 				};
-			}
+				function makeMapListener(window, map, markers)
+				{
+	 				return function(){
+	 					window.open(map, markers);
+	 				};
+				}
 
 			} // end initialize
 			google.maps.event.addDomListener(window, 'load', initialize);
