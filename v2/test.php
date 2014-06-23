@@ -46,7 +46,8 @@
 
 							var contentString = 
 							'<div id="content">'+
-								'<h1 id="firstHeading" class="firstHeading">data.name</h1>'+
+								'<h1 id="firstHeading" class="firstHeading">' + 
+										data.name + '</h1>'+
 								'<div id="bodyContent">'+
 									'<p>' + 
 										'<b>comfort:</b>' + data.comfort + '<br/>' + 
