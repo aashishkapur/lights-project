@@ -38,7 +38,7 @@
 					var request = $.ajax({
 						type: "POST",
 						url: "getData.php",			            
-						data: {'id': id},
+						data: {"id": id},
 						cache: false,
 						dataType: 'json',
 						success: function (data) {
@@ -53,7 +53,7 @@
 							});
 						},
 						error: function(xhr, textStatus, errorThrown){
-							alert("error, i: " + id + "   " + xhr.responseText);
+							alert("error, i: " + id + "   responseText:" + xhr.responseText);
 							console.log("statusText: " + xhr.statusText);
 							console.log("textStatus" + textStatus);
 							console.log("errorThrown" + errorThrown);
