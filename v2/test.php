@@ -74,8 +74,8 @@
 								markers[id], 'click', 
 								function(actualID) {
 									return function() {
-										infoWindows[actualID].open(map,markers[actualID]);
-									};
+										infoWindows[id].open(map,markers[id]);
+									}
 							}(id));
 
 							//from google:
@@ -91,6 +91,13 @@
 							//   }
 							// }(key));
 
+							//other stack overflow
+							// google.maps.event.addListener(
+							// 	markersArray[x], 'click', 
+							// 	makeMapListener(
+							// 		inforwindowArray[x], map, markersArray[x])
+							// );
+
 						},
 						error: function(xhr, textStatus, errorThrown){
 							//alert("error, i: " + id + "   responseText:" + xhr.responseText);
@@ -100,6 +107,13 @@
 						}
 					});
 				}
+			}
+			// use google.maps.event.addListener(markersArray[x], 'click', makeMapListener(inforwindowArray[x], map, markersArray[x]));
+			function makeMapListener(window, map, markers)
+			{
+ 				return function(){
+ 					window.open(map, markers);
+ 				};
 			}
 			google.maps.event.addDomListener(window, 'load', initialize);
 		</script>
