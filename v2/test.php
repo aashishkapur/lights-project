@@ -25,7 +25,7 @@
 				var markers = [];
 				var infoWindows = [];
 				var id = 0;
-				for (id = 0; id <= 3; id++)
+				for (id = 0; id == 0; id++)
 				{
 					///console.log("beginning id:" + id);
 					var request = $.ajax({
