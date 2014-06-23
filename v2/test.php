@@ -37,7 +37,7 @@
 								map: map,
 								title:"Marker: " + i + "!"
 							});
-						}
+						},
 						error: function(){
 							alert("error, i: " + i);
 						}
