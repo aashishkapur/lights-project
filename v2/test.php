@@ -67,13 +67,14 @@
 							//console.log("infowindows[" + id+ "]: " + infoWindows[id]);
 							
 							// alert(id);
-							google.maps.event.addListener(
-								markers[id], 'click', 
-								function(id) {
-									return function() {
-										infoWindows[id].open(map,markers[id]);
-									}
-							}(id));
+
+							// google.maps.event.addListener(
+							// 	markers[id], 'click', 
+							// 	function(id) {
+							// 		return function() {
+							// 			infoWindows[id].open(map,markers[id]);
+							// 		}
+							// }(id));
 
 							//from google:
 							// google.maps.event.addListener(markers[id], 'click', function(){
@@ -94,6 +95,7 @@
 							// 	makeMapListener(
 							// 		inforwindowArray[x], map, markersArray[x])
 							// );
+						google.maps.event.addListener(markers[id], 'click', 	makeMapListener(infoWindows[id], map, markers[id]));
 
 						},
 						error: function(xhr, textStatus, errorThrown){
@@ -101,16 +103,18 @@
 							console.log("textStatus: " + textStatus);
 							console.log("errorThrown: " + errorThrown);
 						}
-					});
-				}
+					});// end ajax
+				}//end loop
+
+			// use google.maps.event.addListener(markersArray[x], 'click', 	makeMapListener(inforwindowArray[x], map, markersArray[x]));
+			function makeMapListener(window, map, markers)
+			{
+ 				return function(){
+ 					window.open(map, markers);
+ 				};
 			}
-			// use google.maps.event.addListener(markersArray[x], 'click', makeMapListener(inforwindowArray[x], map, markersArray[x]));
-			// function makeMapListener(window, map, markers)
-			// {
- 		// 		return function(){
- 		// 			window.open(map, markers);
- 		// 		};
-			// }
+
+			} // end initialize
 			google.maps.event.addDomListener(window, 'load', initialize);
 		</script>
 	</head>
