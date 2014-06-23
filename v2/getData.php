@@ -14,9 +14,4 @@
 		json_encode($row['Latitude']);
 	}
 
-
-
-
-
-
 ?>

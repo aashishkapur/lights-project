@@ -1,15 +1,22 @@
 <?php
 
-$db_conn = mysql_connect(':/cloudsql/lights-project:abcdef',
+$conn = mysql_connect(':/cloudsql/lights-project:abcdef',
   'root', // username
-  'root'      // password
+  'root'  // password
   );
-if(!$db_conn)
+if(!$conn)
 {
 	die("<br/>" . mysql_error());
 }
 
 // echo 'abcdef';
- $selected = mysql_select_db('cfi-v2');
+mysql_select_db('cfi-v2');
+
+// $conn = mysql_connect(':/cloudsql/<your-project-id>:<your-instance-name>',
+//   'root', // username
+//   ''      // password
+//   );
+// mysql_select_db('<database-name'>);
+
 
 ?>
