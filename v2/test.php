@@ -67,14 +67,16 @@
 								content: contentString
 							}));
 
-							console.log("infowindows[" + id+ "]: " + infoWindows[id]);
+							//console.log("infowindows[" + id+ "]: " + infoWindows[id]);
 							
-							// google.maps.event.addListener(
-							// 		markers[id], 'click', function(actualID) {
-							// 		return function() {
-							// 			infoWindows[actualID].open(map,markers[actualID]);
-							// 	}
-							// }(id));
+							alert(id);
+							google.maps.event.addListener(
+								markers[id], 'click', 
+								function(actualID) {
+									return function() {
+										infoWindows[actualID].open(map,markers[actualID]);
+									};
+							}(id));
 
 							//from google:
 							google.maps.event.addListener(markers[id], 'click', function(){
